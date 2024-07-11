@@ -22,7 +22,7 @@ export function Footer() {
         return null; // Return null to prevent rendering the navbar
     }*/
     return (
-        <div className="flex flex-row bg-customTeal px-3 py-[8vh] justify-between sm:justify-around text-white "
+        <div className="flex flex-col lg:flex-row bg-customTeal px-3 py-[8vh] justify-between sm:justify-around text-white "
             
         >
             <div className="flex flex-row gap-32">
@@ -39,7 +39,7 @@ export function Footer() {
             </div>
            
 
-            <div className="flex flex-col text-left mr-36 text-black text-lg tracking-widest font-medium  ">
+            <div className="flex flex-col text-left mr-36 text-black md:text-base sm:text-sm text-sm lg:text-lg tracking-widest font-medium  ">
                 
                 <p>Terminal Four</p>
                 <p>Hounslow</p>
