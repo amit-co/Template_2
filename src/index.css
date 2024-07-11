@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'STIXTwoText';
+    src: url('./assets/fonts/STIXTwoText.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'STIXTwoText';
+    src: url('./assets/fonts/STIXTwoText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'STIXTwoText', serif;
+}
