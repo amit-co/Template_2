@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <div className="bg-cover" style={{ backgroundImage: `url(${img1})` }}>
-        <div className="flex w-full h-screen bg-cover sm:w-full mx-auto " style={{ backgroundImage: `url(${img})` }}>
+          <div className="flex w-full h-screen bg-cover sm:w-full mx-auto " style={{ backgroundImage: `url(${img})` }}>
             <div className="flex flex-row justify-between w-full h-full ">
                 <div className="w-1/4 bg-white text-white text-center bg-opacity-20 backdrop-blur p-8">
                     <div className="text-center mb-4 mt-10">
@@ -31,7 +31,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-col ml-10 justify-center w-1/5 bg-white bg-opacity-20 backdrop-blur-sm p-8">
+                        <div className="flex flex-col ml-10 justify-center w-1/5 bg-white bg-opacity-20 backdrop-blur-sm p-8">
                     <nav className="flex flex-col text-white text-2xl ml-14 text-left space-y-4">
                         <a href="/" className=" hover:text-blue-500">Home</a>
                         <a href="/bookNow" className="hover:text-blue-500">Book Now</a>
@@ -45,7 +45,7 @@ export default function Home() {
                     </nav>
                 </div>
             </div>
-            </div>
+          </div>
             <BookNow />
             <Venue />
             <Gallery />

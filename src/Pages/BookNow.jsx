@@ -134,6 +134,7 @@ export default function BookNow() {
     const [selectedNav, setSelectedNav] = useState(location.pathname);
     const [displayGallery, setDisplayGallery] = useState(false);
     const [displayVenue, setDisplayVenue] = useState(false);
+    const [isFixed, setIsFixed] = useState(false);
 
     const handleNavClick = (path) => {
         setSelectedNav(path);
@@ -207,10 +208,25 @@ export default function BookNow() {
         return options;
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div>
             <div className="bg-fixed bg-cover opacity-75" style={{ backgroundImage: `url(${img6})` }}>
-                <div className={` top-0 left-0 right-0 z-10 transition-transform duration-300 `}>
+              <div className={` top-0 left-0 right-0 z-10 transition-transform duration-300 ${isFixed ? 'fixed' : 'relative'}`}>
                 <div className={`bg-customWhite text-white flex justify-between px-10 items-center transition-opacity duration-300 `}
                    
                 >
@@ -251,7 +267,7 @@ export default function BookNow() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                </div>
                     <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-4"
                         
                     >

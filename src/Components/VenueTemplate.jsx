@@ -26,7 +26,7 @@ export default function VenueTemplate({ venueInfo }) {
         <div>
      
                                
-              <div className="bg-repeat flex flex-col fixed w-full h-full  items-center relative mt-14 mx-auto bg-cover mb-10" style={{ backgroundImage: `url(${img1})` }}>
+              <div className=" flex flex-col fixed w-full h-full  items-center relative mt-14 mx-auto bg-cover mb-10" >
                           <h1 className="sm:text-5xl text-4xl tracking-widest text-customBrown3 font-bold mb-4 text-center">
                                             {venueInfo.venueType}
                           </h1>
