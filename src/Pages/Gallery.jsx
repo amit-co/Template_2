@@ -11,8 +11,8 @@ export default function Gallery() {
         <>
             <div className="flex flex-col bg-customTeal">
                 <div className="flex flex-row w-fit items-center mx-auto sm:mt-[10vh] ml-12">
-                    <img src={camera} className="w-24 h-24" />
-                    <h1 className="text-center font-medium tracking-widest text-Black text-5xl">Gallery</h1>
+                    <img src={camera} className="w-12 lg:w-24 h-12 lg:h-24" />
+                    <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-2xl lg:text-5xl">Gallery</h1>
                 </div>
                 <div className="md:flex w-full h-full items-center md:space-x-5 md:space-y-0 space-y-5 md:p-10 justify-between">
                     <div className="relative group sm:w-[32%] w-full overflow-hidden">

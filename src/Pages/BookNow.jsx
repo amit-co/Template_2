@@ -385,8 +385,8 @@ export default function BookNow() {
                     </div>
 
 
-                <div className="flex bg-customTeal h-20 sm:h-16 mb-6 items-center justify-center ">
-                    <p className="text-base sm:text-lg lg:text-xl text-customBlack2 mx-2 sm:mx-3 text-center place-items-center sm:text-left">
+                <div className="flex bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 items-center justify-center ">
+                    <p className="text-xs sm:text-lg lg:text-xl text-customBlack2 mx-2 sm:mx-3 text-center place-items-center sm:text-left">
                         Terminal Four, Hounslow, TW6 3AF, United Kingdom | +44 (0) 208759 7755 | franky.rodrigues@hilton.com | OXBO-ReserveOcean.com
                     </p>
                 </div>
@@ -398,10 +398,10 @@ export default function BookNow() {
 
                     <form onSubmit={handleSubmit} >
                            
-                        <h2 className="text-4xl font-bold text-center mb-4 mt-8 tracking-widest">Book Now</h2>
+                        <h2 className="md:text-3xl sm:text-2xl text-2xl lg:text-4xl font-bold text-center mb-4 mt-8 tracking-widest">Book Now</h2>
                         <div className="mt-8 md:flex md:space-x-10 md:ml-10 px-2 md:w-full mx-auto">
                                 <InputField label="First Name" name="firstName" type="text" value={formData.firstName}
-                            onChange={handleChange} error={errors.firstName} className="mb-4 md:w-1/2" />
+                            onChange={handleChange} error={errors.firstName} className="mb-4 w-1/2 lg:w-2/2" />
                                 <InputField label="Last Name" name="lastName" type="text" value={formData.lastName}
                             onChange={handleChange} error={errors.lastName} className="mb-4 md:w-1/2"/>
                                 <InputField label="Email" name="email" type="email" value={formData.email}

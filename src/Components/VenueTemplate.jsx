@@ -31,11 +31,11 @@ export default function VenueTemplate({ venueInfo }) {
                                             {venueInfo.venueType}
                           </h1>
 
-                         <div className="flex flex-col w-[100vw] justify-center mx-auto mb-8">
-                  <h1 className=" text-center text-black-600 text-lg tracking-widest font-medium mb-4  whitespace-break-spaces">
+                         <div className="flex flex-col w-56 lg:w-[100vw] justify-center mx-auto mb-8">
+                  <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4  whitespace-break-spaces">
                                       The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
                                       </h1>
-                  <p className=" text-center text-black-600 text-lg tracking-widest font-medium whitespace-break-spaces">
+                  <p className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium whitespace-break-spaces">
                                       Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments That Can Be Used In Different Ways,
                                       As The Occasion Dictates Or As The Mood Changes. From Breakfast To Late. Our Spaces Are Large Enough To Accommodate Gatherings And Groups,
                                       With Clever Partitions Or Siding Panels That Can Be Used To Create Smaller Areas With A Cosier Feel. Seating Arrangements Reflect And
@@ -43,7 +43,7 @@ export default function VenueTemplate({ venueInfo }) {
                                       </p>
                               
                          </div>     
-                              <div className="flex flex-col-2 w-full h-full">
+                              <div className="flex flex-col-2 w-20 h-20 lg:w-full lg:h-full">
                   <div className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
 
                   <div className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
