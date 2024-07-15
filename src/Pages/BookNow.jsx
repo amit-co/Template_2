@@ -229,161 +229,42 @@ export default function BookNow() {
               <div className={` top-0 left-0 right-0 z-10 transition-transform duration-300 ${isFixed ? 'fixed' : 'relative'}`}>
                 <div className={`bg-customWhite text-white flex justify-between px-10 items-center transition-opacity duration-300 `}
                    
-                >
-                    <div className="md:flex hidden space-x-5 2xl:ml-4 mt-10 ">
-                        <a href="https://www.facebook.com/yourprofile">
-                            <img src={img2} />
-                        </a>
-                        <a href="https://www.instagram.com/yourprofile">
-                            <img src={img3} />
-                        </a>
-                        <a href="https://twitter.com/yourprofile">
-                            <img src={img4} />
-                        </a>
-                    </div>
-                    <img
-                        className="md:w-[140px] sm:w-[130px] z-3 cursor-pointer w-[110px] md:ml-14"
-                        src={logo1}
-                        alt="Company Logo"
-                        onClick={() => navigate("/")}
-                        />
-                        <div>
-                            <div className="md:flex text-2xl items-center text-customBrown hidden space-x-2 2xl:mr-8 mt-10">
-                                <img src={img5}
-                                    className="w-[30px]" />
-                                <Link to="tel:+442087597755">+44 (0) 208759 7755</Link>
-                            </div>
-                            <div className="text-white">
-                                {toggle ? (
-                                    <RxCross2
-                                        onClick={() => setToggle(false)}
-                                        className="md:hidden cursor-pointer text-4xl"
-                                    />
-                                ) : (
-                                    <IoMenuOutline
-                                        onClick={() => setToggle(true)}
-                                        className="md:hidden cursor-pointer text-3xl"
-                                    />
-                                )}
-                            </div>
-                        </div>
-                </div>
-                    <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-4"
+                    >
+                        <div className="flex w-20 text-center py-6">
+                   <h1 className="text-black text-4xl">Restaurant Name</h1>
+                      </div>
+                
+                    <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
                         
                     >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 xl:space-x-12 2xl:space-x-16">
+                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 text-customBlack2  text-2xl font-medium xl:space-x-32 mr-28  2xl:space-x-16">
                             <Link to="/" className={`group relative ${selectedNav === '/' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/')}>
                                 <h1>HOME</h1>
-                                <div className={`w-full absolute ${selectedNav === '/' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
+                                <div className={`w-full absolute ${selectedNav === '/' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
                             </Link>
-                            <Link to="/bookNow" className={`group relative ${selectedNav === '/bookNow' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/bookNow')}>
-                                <h1>BOOK NOW</h1>
-                                <div className={`w-full absolute ${selectedNav === '/bookNow' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                            </Link>
+                                <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/about')}>
+                                    <h1>ABOUT US</h1>
+                                    <div className={`w-full absolute ${selectedNav === '/about' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
+                                </Link>
+                           
                             <Link to="/menu" className={`group relative ${selectedNav === '/menu' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/menu')}>
                                 <h1>MENU</h1>
-                                <div className={`w-full absolute ${selectedNav === '/menu' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
+                                <div className={`w-full absolute ${selectedNav === '/menu' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
                             </Link>
-                            <div className={`group relative ${selectedNav === '/venue' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/venue')}>
-                                <h1
-                                    onClick={() => navigate("/venue")}
-                                    onMouseEnter={() => setDisplayVenue(true)}
-                                    onMouseLeave={() => setDisplayVenue(false)}
-                                >
-                                    VENUE
-                                </h1>
-                                <div className={`w-full absolute ${selectedNav === '/venue' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                                {displayVenue && (
-                                    <div
-                                        onMouseEnter={() => setDisplayVenue(true)}
-                                        onMouseLeave={() => setDisplayVenue(false)}
-                                        className="bg-repeat flex flex-col z-10 p-2 space-y-3 absolute w-[10vw]"
-                                        style={{ backgroundImage: `url(${img})` }}
-                                    >
-                                        <Link
-                                            to="/venue/restaurant"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            RESTAURANT
-                                        </Link>
-                                        <Link
-                                            to="/venue/bar"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            BAR
-                                        </Link>
-                                        <Link
-                                            to="/venue/cafe"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            CAFE
-                                        </Link>
-                                        <Link
-                                            to="/venue/ird"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            IRD
-                                        </Link>
-                                    </div>
-                                )}
-                            </div>
-                            <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
-                                <h1>PRIVATE DINNING</h1>
-                                <div className={`w-full absolute ${selectedNav === '/privateDinning' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                            </Link>
-                            <Link to="/giftVoucher" className={`group relative ${selectedNav === '/giftVoucher' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/giftVoucher')}>
-                                <h1>GIFT VOUCHER</h1>
-                                <div className={`w-full absolute ${selectedNav === '/giftVoucher' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                            </Link>
+                           
+                               
+                                       
+                           
                             <Link to="/contact" className={`group relative ${selectedNav === '/contact' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/contact')}>
                                 <h1>CONTACT</h1>
-                                <div className={`w-full absolute ${selectedNav === '/contact' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
+                                <div className={`w-full absolute ${selectedNav === '/contact' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
                             </Link>
-                            <div className={`group relative ${selectedNav === '/gallery' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/gallery')}>
-                                <h1
-                                    onClick={() => navigate("/gallery")}
-                                    onMouseEnter={() => setDisplayGallery(true)}
-                                    onMouseLeave={() => setDisplayGallery(false)}
-                                >
-                                    GALLERY
-                                </h1>
-                                <div className={`w-full absolute ${selectedNav === '/gallery' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                                {displayGallery && (
-                                    <div
-                                        onMouseEnter={() => setDisplayGallery(true)}
-                                        onMouseLeave={() => setDisplayGallery(false)}
-                                        className="bg-repeat flex flex-col z-10 p-2 space-y-3 absolute w-[10vw]"
-                                        style={{ backgroundImage: `url(${img})` }}
-                                    >
-                                        <Link
-                                            to="/gallery/food"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            FOOD
-                                        </Link>
-                                        <Link
-                                            to="/gallery/drinks"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            DRINKS
-                                        </Link>
-                                        <Link
-                                            to="/gallery/teams"
-                                            className="hover:text-cutomOrange transition-all duration-100"
-                                        >
-                                            TEAMS
-                                        </Link>
-                                    </div>
-                                )}
-                            </div>
-                            <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/about')}>
-                                <h1>ABOUT</h1>
-                                <div className={`w-full absolute ${selectedNav === '/about' ? 'block' : 'hidden'} absolute h-[4px] bg-customBrown`}></div>
-                            </Link>
+                           
+                           
                         </div>
                     </div>
                     </div>
-
+                    </div>
 
                 <div className="flex bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 items-center justify-center ">
                     <p className="text-xs sm:text-lg lg:text-xl text-customBlack2 mx-2 sm:mx-3 text-center place-items-center sm:text-left">
@@ -396,124 +277,10 @@ export default function BookNow() {
                     
              
 
-                    <form onSubmit={handleSubmit} >
+                   
                            
-                        <h2 className="md:text-3xl sm:text-2xl text-2xl lg:text-4xl font-bold text-center mb-4 mt-8 tracking-widest">Book Now</h2>
-                        <div className="mt-8 md:flex md:space-x-10 md:ml-10 px-2 md:w-full mx-auto">
-                                <InputField label="First Name" name="firstName" type="text" value={formData.firstName}
-                            onChange={handleChange} error={errors.firstName} className="mb-4 w-1/2 lg:w-2/2" />
-                                <InputField label="Last Name" name="lastName" type="text" value={formData.lastName}
-                            onChange={handleChange} error={errors.lastName} className="mb-4 md:w-1/2"/>
-                                <InputField label="Email" name="email" type="email" value={formData.email}
-                            onChange={handleChange} error={errors.email} className="mb-4 md:w-1/2"/>
-                            
-                                <InputField label="Contact" name="contact" type="number" value={formData.contact}
-                            onChange={handleChange} error={errors.contact} className="mb-4 md:w-1/2" />
-                                <SelectField label="Preferred Communication Language" type="text" name="language"
-                                    value={formData.language} onChange={handleChange}
-                                    options={["English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Hindi"]} className="md:w-1/2" />
-                    </div>
-                    <div className="flex flex-col md:flex md:space-x-10 w-full mt-6 ml-10">
-                        <div className="flex flex-col md:w-1/2 md:flex-row md:space-x-4 mb-6 text-black" >
-                            <div className="mt-8 md:flex md:space-x-10 px-2 w-12/12 ">
-                                <InputField label="Date" name="date" type="date" value={formData.date} onChange={handleChange} />
-                             
-                            <div className="block text-black-700 tracking-widest text-lg font-medium ">
-                                    <InputField label="Time" name="time" type="time" value={formData.time} onChange={handleChange} />
-                                    
-                                
-                                </div>
-                                <SelectField label="Guests"
-                                    name="guests"
-                                    value={formData.guests}
-                                    onChange={handleChange}
-                                    options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-                                />
-                                <div className="mb-4">
-                                <label className="block text-black-700 tracking-widest text-lg font-medium ">Dietary Restriction:</label>
-                                    <Select
-                                        name="dietaryRestriction"
-                                        value={dietaryOptions.filter((option) => formData.dietaryRestriction.includes(option.value))}
-                                        onChange={handleSelectChange}
-                                        options={dietaryOptions}
-                                        isMulti
-                                        placeholder="Select Dietary Restrictions"
-                                    className="w-[300px] appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg"
-                                        components={{ Option: customOption, MultiValueLabel: customMultiValueLabel }}
-                                        styles={{
-                                            control: (base) => ({
-                                                ...base,
-                                                backgroundSize: 'cover',
-                                                backgroundRepeat: 'no-repeat',
-                                            }),
-                                            menu: (base) => ({
-                                                ...base,
-                                                backgroundImage: `url(${img})`,
-                                                backgroundSize: 'cover',
-                                                backgroundRepeat: 'no-repeat',
-                                            }),
-                                            multiValue: (base) => ({
-                                                ...base,
-                                                backgroundImage: `url(${img})`,
-                                                backgroundSize: 'cover',
-                                                backgroundRepeat: 'no-repeat',
-                                            }),
-                                            multiValueLabel: (base) => ({
-                                                ...base,
-                                                backgroundImage: `url(${img})`,
-                                                backgroundSize: 'cover',
-                                                backgroundRepeat: 'no-repeat',
-                                            }),
-                                        }}
-                                    />
-                                </div>
-                                <SelectField label="Special Occasions"
-                                    name="specialOccasions"
-                                    value={formData.specialOccasions}
-                                    onChange={handleChange}
-                                    options={["Select Special Occasion", "Birthday", "Anniversary", "Promotion", "Farewell Party", "National Holiday", "Halloween", "Christmas", "Thanksgiving", "New Year", "House Warming", "Baby Shower", "Bridal Shower", "Engagement", "Wedding", "Other"]}
-                                />
-                                {formData.specialOccasions === "Other" && (
-                                    <InputField
-                                        label="Please Specify Occasion"
-                                        name="otherOccasion"
-                                        type="text"
-                                        value={formData.otherOccasion}
-                                        onChange={handleChange}
-                                        error={errors.otherOccasion}
-                                    />
-                                )}
-                                </div>
-                            <div className="md:w-1/2 mb-10 mt-8 ">
-                                <label className=" text-black-700 mr-20 tracking-widest text-lg font-medium ">Reservation Note:</label>
-                                    <button
-                                        type="button"
-                                        onClick={() => setNoteVisible(!noteVisible)}
-                                        className="w-[200px]  text-left px-3 py-2  border-[2px] border-customBrown rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-                                    >
-                                        {noteVisible ? "Hide Note" : "Click to Add a Note"}
-                                    </button>
-                                    {noteVisible && (
-                                        <textarea
-                                            name="reservationNote"
-                                            value={formData.reservationNote}
-                                            onChange={handleChange}
-                                        className="w-full appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
-                                            style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-                                        />
-                                )}
-                                
-                            </div>
-
-                    </div>
-
-            </div>
-
-                    <div className="flex flex-row mx-auto items-center">
-                        <button type="submit" className="border-customBrown rounded-lg font-medium bg-customBrown2 md:px-14 px-7 py-2 md:text-lg text-white transition-all duration-300 mx-auto md-2">Book A Table</button>
-                        </div>
-                        </form>
-
+                        <h2 className="md:text-3xl sm:text-2xl text-2xl lg:text-4xl font-bold text-customBlack2 text-center mb-4 mt-8 tracking-widest">Book Now</h2>
+                       
                
                   
                 
