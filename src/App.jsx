@@ -25,24 +25,13 @@ import Venue from "./Pages/Venue";
 import Refund from "./Pages/Refund";
 
 function App() {
+    
     return (
-        <div className="relative font-customFont">
+       
+            <div className="relative overflow-x-hidden">
             <BrowserRouter>
-                <InnerApp />
-            </BrowserRouter>
-        </div>
-    );
-}
-
-function InnerApp() {
-    const location = useLocation();
-    const shouldRenderNavbar = location.pathname !== "/";
-   // const shouldRenderFooter = location.pathname !== "/";
-
-    return (
-        <>
-            {shouldRenderNavbar && <Navbar />}
-            <Routes>
+                <Navbar  />
+                <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/bookNow" element={<BookNow />} />
                 <Route path="/menu" element={<Suspense fallback={<h1>Loading...</h1>}><Menu /></Suspense>} />
@@ -65,9 +54,11 @@ function InnerApp() {
             </Routes>
             <SpeedInsights />
             <Analytics />
-            
-        </>
+                <Footer />
+            </BrowserRouter>
+            </div>
     );
 }
+
 
 export default App;

@@ -17,7 +17,6 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [displayGallery, setDisplayGallery] = useState(false);
     const [displayVenue, setDisplayVenue] = useState(false);
-
     const location = useLocation();
     const [selectedNav, setSelectedNav] = useState(location.pathname);
 
@@ -27,6 +26,9 @@ export default function Navbar() {
 
     const pathsWithoutNavbar = [
         "/",
+        "/menu",
+        "/privateDinning",
+       
 
     ];
 

@@ -1,10 +1,6 @@
 ﻿import { useState } from "react";
-import { FaDownload } from "react-icons/fa6";
-import { Link, useNavigate} from "react-router-dom";
-import { GrGallery } from "react-icons/gr";
-const pdfDownloadLink = "/Pdf/OXBO-Breakfast Menus.pdf";
+import { useNavigate} from "react-router-dom";
 import PropTypes from 'prop-types';
-import img1 from "/New/bgn.png";
 import img2 from "/New/Group 36.png";
 import img3 from "/New/Group 37.png";
 import img4 from "/New/Group 43.png";
@@ -43,15 +39,14 @@ export default function VenueTemplate({ venueInfo }) {
                                       </p>
                               
                          </div>     
-                              <div className="flex flex-col-2 w-20 h-20 lg:w-full lg:h-full">
-                  <div className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
+                              <div className="flex xl:flex-row flex-col w-20 h-20 lg:w-full lg:h-full">
+                                      <div className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
 
-                  <div className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
-
+                                      <div className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
                               </div>
-                              <div className="flex flex-col-2 w-full h-full gap-72 space-y-24 mr-2 ml-16">
-                  <div className="bg-no-repeat h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48 ml-80 " /></div>
-                  <div className="bg-no-repeat h-[400px] mr-20 rounded-md sm:mr-4 sm:mt-32 lg:w-[125vh] " style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="absolute mt-48 right-96" /></div>
+                              <div className="flex xl:flex-row flex-col w-full h-full  space-y-12 mr-2 ml-14">
+                  <div className="bg-no-repeat h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
+                  <div className="bg-no-repeat h-[400px] ml-48 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 right-44 " /></div>
                              </div>
              
               </div>

@@ -7,13 +7,13 @@ import Venue from "./Venue";
 import { RestrauntLocation } from "../Components/RestrauntLocation";
 import Gallery from "../Pages/Gallery";
 import img1 from "/New/bgn.png";
-import { Footer } from "../Components/Footer";
+
 
 export default function Home() {
     return (
         <>
-            <div className="bg-cover" style={{ backgroundImage: `url(${img1})` }}>
-                <div className="flex place-content-between w-full h-screen bg-cover mx-auto" style={{ backgroundImage: `url(${img})` }}>
+            <div className="bg-cover " style={{ backgroundImage: `url(${img1})` }}>
+                <div className="flex place-content-between w-full h-screen bg-cover  mx-auto" style={{ backgroundImage: `url(${img})` }}>
                     <div className="w-4/12 xl:w-1/4 bg-white bg-opacity-20 backdrop-blur p-4 lg:p-8 flex flex-col items-center justify-center">
                         <div className="text-center mb-4 mt-10">
                             <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">ReserveOcean</h1>
@@ -32,17 +32,17 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center w-4/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
-                        <nav className="flex flex-col text-white text-lg md:text-xl lg:text-2xl text-left space-y-4 mt-12">
+                    <div className="flex flex-col items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
+                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-6 mt-12">
                             <a href="/" className="hover:text-blue-500">Home</a>
                             <a href="/bookNow" className="hover:text-blue-500">Book Now</a>
-                            <a href="/" className="hover:text-blue-500">Menu</a>
-                            <a href="/" className="hover:text-blue-500">Venue</a>
-                            <a href="/" className="hover:text-blue-500">Private Dining</a>
-                            <a href="/" className="hover:text-blue-500">Gallery</a>
-                            <a href="/" className="hover:text-blue-500">Gift Voucher</a>
-                            <a href="/" className="hover:text-blue-500">Contact</a>
-                            <a href="/" className="hover:text-blue-500">About</a>
+                            <a href="/menu" className="hover:text-blue-500">Menu</a>
+                            <a href="/venue" className="hover:text-blue-500">Venue</a>
+                            <a href="/privateDining" className="hover:text-blue-500">Private Dining</a>
+                            <a href="/gallery" className="hover:text-blue-500">Gallery</a>
+                            <a href="/giftVoucher" className="hover:text-blue-500">Gift Voucher</a>
+                            <a href="/contact" className="hover:text-blue-500">Contact</a>
+                            <a href="/about" className="hover:text-blue-500">About</a>
                         </nav>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ export default function Home() {
                 <Venue />
                 <Gallery />
                 <RestrauntLocation />
-                <Footer />
+                
             </div>
         </>
     );
