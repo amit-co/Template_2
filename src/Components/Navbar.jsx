@@ -9,7 +9,7 @@ import img4 from "/icons/Call.png";
 import logo from "/dark_logo.png";
 import img from "/Textures/4523.png";
 
-export function Navbar() {
+export default function Navbar() {
     const navigate = useNavigate();
 
     const { pathname } = useLocation();
