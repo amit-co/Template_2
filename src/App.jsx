@@ -14,7 +14,7 @@ const Contact = lazy(() => import("./Pages/Contact"));
 const Team = lazy(() => import("./Pages/Team"));
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery";
-import { Navbar } from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import { Caring } from "./Components/Caring";
 import { Sociable } from "./Components/Sociable";
 import Food from "./Pages/Food";

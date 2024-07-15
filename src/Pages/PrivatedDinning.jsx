@@ -131,7 +131,7 @@ export default function PrivateDinning() {
                   <h1 className="ml-5 text-2xl font-bold">Make A Reservation</h1>
               </div>
 
-              <img class="h-auto max-w-full ml-10 object-contain" src={img2} />
+              <img className="h-auto max-w-full ml-10 object-contain" src={img2} />
 
             </div>
           

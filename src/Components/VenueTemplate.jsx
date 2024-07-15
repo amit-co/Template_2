@@ -64,7 +64,6 @@ VenueTemplate.propTypes = {
     venueInfo: PropTypes.shape({
         image: PropTypes.string.isRequired,
         button: PropTypes.object.isRequired,
-        link: PropTypes.string.isRequired,
         venueType: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
         place: PropTypes.string.isRequired,

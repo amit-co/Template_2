@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { LuClock } from "react-icons/lu";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "/logo.png";
+import { Link, useNavigate } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import logo1 from "/dark_logo.png";
@@ -24,12 +22,6 @@ import FaLupin from "/src/assets/Dietery_Resctrictions/lupin.jpg";
 import { z } from "zod";
 import img from "/Textures/4524.png";
 import img6 from "/New/bgn.png";
-import b1 from "/New/Rectangle 58.png";
-import b2 from "/New/Rectangle 59.png";
-import b3 from "/New/Rectangle 60.png";
-import b4 from "/New/Rectangle 61.png";
-import menu from "/New/Group 108.png";
-import img1 from "/New/gallery1.png";
 import img2 from "/icons/facebook.png";
 import img3 from "/icons/instagram.png";
 import img4 from "/icons/twitter.png";
@@ -43,20 +35,20 @@ const schema = z.object({
 });
 
 const InputField = ({ label, name, type, value, onChange, error }) => (
-    <div className="mb-4">
+    <div >
         <div className="flex justify-between">
             <label className="block text-black-700 tracking-widest text-lg font-medium">{label}:</label>
             
         </div>
-        <input
-            type={type}
-            name={name}
-            value={value}
-            onChange={onChange}
-            className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-            style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-        />
-        {error && <span className="text-red-500 ml-14 text-sm ">{error}</span>}
+                <input
+                    type={type}
+                    name={name}
+                    value={value}
+                    onChange={onChange}
+                    className="appearance-none bg-clip-text text-black-700 px-2 py-2 border-[2px] border-customBrown rounded-lg w-full focus:outline-none"
+                    style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
+                />
+                {error && <span className="text-red-500 text-sm ">{error}</span>}
     </div>
 );
 
@@ -70,22 +62,22 @@ InputField.propTypes = {
 };
 
 const SelectField = ({ label, name, value, onChange, options }) => (
-    <div className="mb-4">
-        <label className="block text-black-700 tracking-widest text-lg font-medium">{label}:</label>
-        <select
-            name={name}
-            value={value}
-            onChange={onChange}
-            className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-            style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-        >
-            {options.map((option) => (
-                <option key={option} value={option} style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                    {option}
-                </option>
-            ))}
-        </select>
-    </div>
+        <div >
+            <label className="block text-black-700 tracking-widest text-lg font-medium">{label}:</label>
+                <select
+                    name={name}
+                    value={value}
+                    onChange={onChange}
+                    className="appearance-none bg-clip-text text-black-700 px-2 py-2 border-[2px] w-full border-customBrown rounded-lg focus:outline-none"
+                    style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
+                >
+                        {options.map((option) => (
+                            <option key={option} value={option} style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                                {option}
+                            </option>
+                        ))}
+                </select>
+        </div>
 );
 
 SelectField.propTypes = {
@@ -179,17 +171,19 @@ export default function BookNow() {
     const handleSubmit = (e) => {
         e.preventDefault();
         try {
-            schema.parse(formData);
-            const queryString = new URLSearchParams(formData).toString();
-            window.location.href = `https://reserve-ocean-website.vercel.app/reservationconfirmation?${queryString}`;
-        } catch (error) {
-            if (error instanceof z.ZodError) {
-                const errorMessages = error.errors.reduce((acc, curr) => {
-                    acc[curr.path[0]] = curr.message;
-                    return acc;
-                }, {});
-                setErrors(errorMessages);
-            }
+                schema.parse(formData);
+                const queryString = new URLSearchParams(formData).toString();
+                window.location.href = `https://reserve-ocean-website.vercel.app/reservationconfirmation?${queryString}`;
+                } catch (error)
+        {
+
+                if (error instanceof z.ZodError) {
+                        const errorMessages = error.errors.reduce((acc, curr) => {
+                            acc[curr.path[0]] = curr.message;
+                            return acc;
+                        }, {});
+                    setErrors(errorMessages);
+                }
         }
     };
 
