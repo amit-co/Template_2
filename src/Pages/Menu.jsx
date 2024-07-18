@@ -1,6 +1,6 @@
 import img1 from "/New/bgn.png";
 import { useNavigate } from 'react-router-dom';
-import back from "/buttons/Group 46.png";
+import back from "/buttons/Group 146.png";
 import { Reserve } from "../Components/Reserve";
 import m1 from "/Menu/ird.png";
 import m2 from "/Menu/bar.png";
@@ -13,11 +13,11 @@ import img10 from "/New/gallery1.png";
 export default function Menu() {
     const navigate = useNavigate();
     return (
-        <div className="bg-cover mb-10" style={{ backgroundImage: `url(${img1})` }}>
+        <div className="bg-cover pb-10" style={{ backgroundImage: `url(${img1})` }}>
             
-            <div className="flex flex-row mr-10">
+            <div className="flex flex-row mr-8">
                 <button
-                    className="self-start text-black text-2xl font-bold mt-10 "
+                    className="self-start text-black text-2xl font-bold mt-10 ml-10"
                     onClick={() => navigate('/')}
                 >
                     <img src={back} alt="backward" className="w-10 h-10 " />

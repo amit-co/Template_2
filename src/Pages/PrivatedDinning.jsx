@@ -1,306 +1,235 @@
-import img from "/oxboImage.jpg";
-import { Quote } from "../Components/Quote";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
-import axios from "axios";
-import { config } from "../config";
-import { toast } from "react-toastify";
-import { z } from "zod"
-import img1 from "/Textures/4523.png"
-import img2 from "/Textures/Vector 82.png"
-import img3 from "/Textures/Frame 28.png"
-import img4 from "/Textures/4525.png"
+import { useState, useEffect } from "react";
+import { LuClock } from "react-icons/lu";
+import { FaRegCalendar } from "react-icons/fa6";
+import { GoPeople } from "react-icons/go";
+import { useNavigate } from 'react-router-dom';
+import img4 from "/New/bgn.png";
+import sp1 from "/New/Rectangle 4632.png";
+import back from "/buttons/Group 146.png";
+
+
+const SelectField = ({ name, value, onChange, options }) => (
+    <div className="mb-4">
+
+        <select
+            name={name}
+            value={value}
+            onChange={onChange}
+            className="bg-clip-text text-xl text-black-700 w-[40vh] px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+
+        >
+            {options.map((option) => (
+                <option key={option} value={option} >
+                    {option}
+                </option>
+            ))}
+        </select>
+    </div>
+);
 
 export default function PrivateDinning() {
+    const navigate = useNavigate();
   
-                  const schema = z.object({
-                    name: z
-                      .string()
-                      .min(1, "First name is required")
-                      .max(50, "First name must be at most 50 characters"),
-                    email: z
-                      .string()
-                      .email("Invalid email address")
-                      .max(100, "Email must be at most 100 characters"),
-                    phone: z
-                      .string()
-                      .min(10, "Contact number must be at least 10 characters long")
-                      .max(15, "Contact number must be at most 15 characters long"),
-                  });
-
-                  const initialFormData = {
-                    date: new Date(),
-                    time: "16:00",
-                    people: 2,
-                    name: "",
-                    email: "",
-                    phone: "",
-                    occassion: "",
-                    message: "",
-                    tag : "PD"
-                  }
-                  const [formData, setFormData] = useState(initialFormData);
-
-                  const[errors,setErrors] = useState({})
-                  console.log(errors)
-                  const changeHandler = (e) => {
-                    const { name, value } = e.target;
-                    setFormData((prev) => ({
-                      ...prev,
-                      [name]: value,
-                    }));
-                  };
-
-                  const handleDateChange = (date) => {
-                    setFormData((prev) => ({
-                      ...prev,
-                      date: date,
-                    }));
-                  };
-
-  function formHandler(){
-                  try{
-                    schema.parse(formData)
-                    axios({
-                    method : "post",
-                    url : `${config.url}/messages`,
-                    data : formData
-                })
-                    .then((res)=>{
-                      toast.success('Message sent', {
-                        position: "top-center",
-                        autoClose: 1998,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        });
-                        setFormData(initialFormData)
-        
-                    })
-                    .catch((e)=>{
-                        console.log(e)
-                    })
-                  }catch (error) {
-                        if (error instanceof z.ZodError) {
-                          const errorMessages = error.errors.reduce((acc, curr) => {
-                            acc[curr.path[0]] = curr.message;
-                            return acc;
-                          }, {});
-                          setErrors(errorMessages);
-                        }
-                  }
     
-  }
+    const currentDate = new Date().toISOString().split('T')[0];
+    const [selectedDate, setSelectedDate] = useState(currentDate);
+    const [noOfPeople, setNoOfPeople] = useState("2 people");
+
+    const initialFormData = {
+        date: new Date(),
+        time: "16:00",
+        people: 2,
+        occassion: "",
+        message: "",
+        
+    }
+    const [formData, setFormData] = useState(initialFormData);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    };
+
+  
+
+    // Function to get the nearest 30-minute interval
+    const getNearestThirtyMinuteInterval = (date) => {
+        const minutes = date.getMinutes();
+        const roundedMinutes = Math.ceil(minutes / 30) * 30;
+        if (roundedMinutes === 60) {
+            date.setHours(date.getHours() + 1);
+            date.setMinutes(0);
+        } else {
+            date.setMinutes(roundedMinutes);
+        }
+        date.setSeconds(0);
+        date.setMilliseconds(0);
+        return date.toTimeString().slice(0, 5);
+    };
+
+    const [selectedTime, setSelectedTime] = useState(getNearestThirtyMinuteInterval(new Date()));
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSelectedTime(getNearestThirtyMinuteInterval(new Date()));
+        }, 60000); // Update every minute to keep the default time accurate
+        return () => clearInterval(interval);
+    }, []);
+
+    const handleDateChange = (date) => {
+        setSelectedDate(date.toISOString().split('T')[0]);
+    };
+
+    const clickHandler = () => {
+        const formData = {
+            date: selectedDate,
+            time: selectedTime,
+            people: noOfPeople
+        };
+        const queryString = new URLSearchParams(formData).toString();
+        window.location.href = `https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine?${queryString}`;
+    };
+
+    const handleTimeChange = (e) => {
+        setSelectedTime(e.target.value);
+    };
+
+    const handleNoOfPeople = (e) => {
+        setNoOfPeople(e.target.value);
+    };
+
+    const generateTimeOptions = () => {
+        const options = [];
+        const start = new Date();
+        start.setHours(8, 0, 0, 0); // Start time: 8:00
+        const end = new Date();
+        end.setHours(23, 0, 0, 0); // End time: 23:00
+
+        while (start <= end) {
+            options.push(start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+            start.setMinutes(start.getMinutes() + 30); // Increment by 30 minutes
+        }
+
+        return options;
+    };
 
     return (
-        <div className="bg-repeat" style={{ backgroundImage: `url(${img4})` }}>
-                      <div
-                        style={{ backgroundImage: `url(${img})` }}
-                        className="h-[65vh] bg-fixed"
-                      ></div>
+        
+        <div className="bg-cover pb-10 " style={{ backgroundImage: `url(${img4})` }}>
+            <div className="flex flex-row mr-8 ">
+            <button
+                className="self-start mt-10 ml-10"
+                onClick={() => navigate('/')}
+            >
+                <img src={back} alt="backward" className="w-10 h-10 object-contain" />
+            </button>
          
-                      <h1 className="md:text-5xl text-3xl tracking-widest text-customGray text-center font-bold mt-6">
+                <h1 className="md:text-5xl text-3xl tracking-widest text-customBrown3 font-bold mt-10 mx-auto">
                         PRIVATE DINING
-                          </h1>
-                      <div className="h-[4px] bg-gradient-to-r from-transparent via-gray-400  to-transparent my-6"></div>
-                      <p className="md:w-11/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
-                    Welcome to OXBO, where culinary excellence meets unparalleled
-                    hospitality. Nestled in the heart of Walles, our restaurant offers a
-                    dynamic dining experience that celebrates the fusion of modern and
-                    traditional flavors. At OXBO, we pride ourselves on sourcing the finest
-                    local ingredients to craft innovative dishes that cater to a variety of
-                    palates. Whether you're indulging in our signature creations or
-                    exploring our seasonal specials, each meal is a journey of taste and
-                    texture. Our stylish yet cozy ambiance, complemented by exceptional
-                    service, ensures that every visit is memorable. Join us at OXBO and
-                    savor the art of fine dining.
-                  </p>
-                  <p className="md:w-9/12 text-center mx-auto text-2xl font-medium text-black-900 mt-5">
-                    Discover the perfect blend of comfort and sophistication in our
-                    thoughtfully designed space, where every detail is crafted to enhance
-                    your dining experience. From intimate dinners to lively gatherings, OXBO
-                    is the ideal setting for any occasion.
-          </p>
-          <div>
-                <div className="mt-2 flex items-center ml-10 " >
-                  <img className="h-auto max-w-full object-contain ml-3" src={img3}  />
-                  <h1 className="ml-5 text-2xl font-bold">Make A Reservation</h1>
-              </div>
-
-              <img className="h-auto max-w-full ml-10 object-contain" src={img2} />
-
+               </h1>
             </div>
+                      <p className="md:w-10/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
+                            Your Perfect Destination For Any Occasion, Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments
+                            That Can Be Used In Different Ways, As The Occasion Dictates Or As The Mood Changes From Breakfast To Late. Our Spaces Are Large Enough To Accommodate
+                            Gatherings And Groups, With Clever Partitions Or Sliding Pagels That Can Be Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements
+                            Reflect And Respect Single Diners And Drinkers Too.
+                     </p>
+                  
           
-          <div className="bg-repeat mb-3 mt-10 rounded-lg mx-10 py-10  object-contain" style={{ backgroundImage: `url(${img1})` }} >
-                   
-          
-                   <div className="mt-8 md:flex md:space-x-8 px-2 w-9/12 mx-auto">
-                       <div className="md:w-4/12 flex flex-col">
-                          <div className="flex justify-between">
-                            <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="name">
-                                NAME
-                              </label>
-                         
+            <div className="bg-customSalmon bg-opacity-25 mb-3 mt-10 rounded-lg mx-16 py-10 " >
+                <div className="flex flex-row mx-16 space-x-24">
+                    <img src={sp1} className="object-contain" />
+                <div className="flex flex-col  items-center ">
+                    <div >
+                        <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14 ">
+                            <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
+                                {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
+                                    <option key={number} value={number}>{number} People</option>
+                                ))}
+                            </select>
+                            <GoPeople className="absolute left-3 text-xl " />
                         </div>
-                      <input
-                        name="name"
-                        onChange={changeHandler}
-                        value={formData.name}
-                        type="text"
-                        id="name"
-                        className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                      />
-                      {errors.name && <h1 className="text-red-500 text-sm">{errors.name}</h1>}
-          
+                        </div>
+                        <div className="mt-2">
+                        <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                            <DatePicker
+                                selected={new Date(selectedDate)}
+                                onChange={handleDateChange}
+                                dateFormat="dd/MM/yyyy"
+                                showYearDropdown
+                                scrollableYearDropdown
+                                yearDropdownItemNumber={15}
+                                className="w-full pl-10 pr-4 text-xl  outline-none bg-clip-text"
+                            />
+                            <FaRegCalendar className="absolute left-3 text-xl " />
+                        </div>
+                        </div>
+                        <div className="mt-2">
+                        <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                            <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
+                                {generateTimeOptions().map(time => (
+                                    <option key={time} value={time}>
+                                        {time}
+                                    </option>
+                                ))}
+                            </select>
+                            <LuClock className="absolute left-3 text-xl " />
+                        </div>
+                        </div>
+                        <div className="mt-2">
+                        <h1 className="text-2xl tracking-widest font-semibold ">Occassion</h1>
+                        
+                        <div className="relative flex items-center ">
+                            <SelectField
+                                id="occasion"
+                                name="occassion"
+                                value={formData.occassion}
+                                onChange={handleChange} 
+                                options={["Select Special Occasion", "Birthday", "Anniversary", "Promotion", "Farewell Party", "National Holiday", "Halloween", "Christmas", "Thanksgiving", "New Year", "House Warming", "Baby Shower", "Bridal Shower", "Engagement", "Wedding", "Other"]}
+                            />
+                            {formData.Occasion === "Other" && (
+                                <InputField
+                                    label="Please Specify Occasion"
+                                    name="otherOccasion"
+                                    type="text"
+                                    value={formData.otherOccasion}
+                                    onChange={handleChange}
+                                   
+                                />
+                            )}
+                        </div>
                     </div>
-                       <div className="md:w-4/12 flex flex-col">
-                                 <div className="flex justify-between">
-                            <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="email">
-                                        EMAIL
-                                      </label>
-                                      
-                                  </div>
-                                          <input
-                                            type="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={changeHandler}
-                                            id="email"
-                                            className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                          />
-                                  {errors.email && <h1 className="text-red-500 text-sm">{errors.email}</h1>}
-                       </div>
-                            <div className="md:w-4/12 flex flex-col">
-                                        <div className="flex justify-between">
-                            <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="phone">
-                                                PHONE
-                                              </label>
-                                             
-                                        </div>
-                                              <input
-                                                type="number"
-                                                id="phone"
-                                                onChange={changeHandler}
-                                                value={formData.phone}
-                                                name="phone"
-                                                className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                              />
-                                              {errors.phone && <h1 className="text-red-500 text-sm">{errors.phone}</h1>}
-                            </div>
-                   </div>
-                                  <div className="mt-8 md:flex md:space-x-8 px-2 w-9/12 mx-auto">
-                                                <div className="md:w-4/12 flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="date">
-                                                    DATE
-                                                  </label>
-                                                  <DatePicker
-                                                    name="date"
-                                                    selected={formData.date}
-                                                    onChange={handleDateChange}
-                                                    dateFormat="dd/MM/yyyy"
-                                                    className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                                  />
-                                                </div>
-                                        <div className="md:w-4/12 flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="time">
-                                                TIME
-                                              </label>
-                                              <select
-                                                id="time"
-                                                value={formData.time}
-                                                name="time"
-                                                onChange={changeHandler}
-                                                className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                              >
-                                                    {[
-                                                      "16:00",
-                                                      "16:30",
-                                                      "17:00",
-                                                      "17:30",
-                                                      "18:00",
-                                                      "18:30",
-                                                      "19:00",
-                                                      "19:30",
-                                                      "20:00",
-                                                      "20:30",
-                                                      "21:00",
-                                                      "21:30",
-                                                      "22:00",
-                                                      "22:30",
-                                                      "23:00",
-                                                    ].map((time) => (
-                                                          <option key={time} value={time}>
-                                                               {new Date(`1970-01-01T${time}Z`).toLocaleTimeString([], {
-                                                                    hour: "2-digit",
-                                                                    minute: "2-digit",
-                                                               })}
-                                                          </option>
-                                                    ))}
-                                              </select>
-                                        </div>
-                                        <div className="md:w-4/12 flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="people">
-                                            PEOPLE
-                                          </label>
-                                          <select
-                                            id="people"
-                                            name="people"
-                                            value={formData.people}
-                                            onChange={changeHandler}
-                                            className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                          >
-                                            {Array.from({ length: 19 }, (_, i) => i + 2).map((number) => (
-                                              <option key={number} value={number}>
-                                                {number} People
-                                              </option>
-                                            ))}
-                                          </select>
-                                        </div>
-                                  </div>
-                       <div className="mt-8 md:flex md:space-x-8 px-2 w-9/12 mx-auto">
-                                        <div className="md:w-full flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="occasion">
-                                            OCCASION
-                                          </label>
-                                          <input
-                                            type="text"
-                                            id="occasion"
-                                            name="occassion"
-                                            value={formData.occassion}
-                                            onChange={changeHandler}
-                                            className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                          />
-                                        </div>
-                       </div>
-                       <div className="px-2 pb-5 w-9/12 mx-auto">
-                                        <div className="flex mt-2 flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="message">
-                                            MESSAGE
-                                          </label>
-                                              <textarea
-                                                name="message"
-                                                onChange={changeHandler}
-                                                value={formData.message}
-                                                className="appearance-none bg-clip-text text-black-700 px-3 py-2 border-[2px] border-customBrown rounded-lg focus:outline-none"
-                                                rows="5"
-                                                id="message"
-                                              ></textarea>
-                                        </div>
-                       </div>
-                                      <div className="flex w-9/12 px-2  mx-auto justify-center">
-                                                <button onClick={formHandler} className="border-customBrown rounded-lg font-medium bg-customBrown2 md:px-14 px-7 py-2 md:text-lg text-white transition-all duration-300">
-                                                  SEND MESSAGE
-                                                </button>
-                                      </div>
+
+                        <div>
+                        <h1 className="text-2xl tracking-widest font-semibold ">Reservation Note</h1>
+
+                        <div className="relative flex items-center ">
+                            <textarea
+                                name="message"
+                                onChange={handleChange}
+                                value={formData.message}
+                                className="bg-clip-text w-[40vh] text-black-700 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+                                rows="5"
+                                id="message"
+                            ></textarea>
+                        </div>
+                    </div>
+
+
+                    <button onClick={clickHandler} className="w-[25vh] h-14 mt-2 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded transition duration-300 hover:bg-orange-600">
+                        Find a Table
+                    </button>
+
+                </div>
+                </div>
+            </div>
+             
           
-         </div>
-              <div className="w-10/12 mx-auto"><Quote /></div>
-          
-    </div>
+        </div>
           
   );
 }

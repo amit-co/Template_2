@@ -11,7 +11,7 @@ export function Footer() {
   
     return (
         <>
-        <div className="flex flex-col lg:flex-row bg-customTeal px-3 py-[8vh] mb-10 justify-between sm:justify-around  "
+        <div className="flex flex-col lg:flex-row bg-customTeal px-3 py-[8vh] pb-10 justify-between sm:justify-around  "
             
         >
             <div className="flex flex-row space-x-36">

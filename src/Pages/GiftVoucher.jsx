@@ -1,63 +1,44 @@
-import img from "/Gallery/img11.jpeg";
-import logo from "/dark_logo.png";
-import { IoIosArrowForward } from "react-icons/io";
 import Discount from "../Components/Discount";
-import img1 from "/Gallery/img6.jpeg";
+import img2 from "/New/bgn.png";
+import { useNavigate } from 'react-router-dom';
+import back from "/buttons/Group 146.png";
 
 
 export default function Gift() {
-  
+    const navigate = useNavigate();
 
     return (
-    
-        <div className="flex flex-cols-3 justify-center sm:mt-[32vh] mt-[10vh] sm:space-x-3 sm:flex md:w-11/12 md:max-lg:w-9/12 md:mx-10">
-            
-            <div className="flex md:w-11/12 w-full object-contain mb-10 mx-auto">
-                <img src={img} alt="" />
+        <div className="bg-cover pb-10" style={{ backgroundImage: `url(${img2})` }}>
+            <div className="flex flex-row mr-8 ">
+                <button
+                    className="self-start mt-10 ml-10"
+                    onClick={() => navigate('/')}
+                >
+                    <img src={back} alt="backward" className="w-10 h-10 " />
+                </button>
+                <h1 className="text-customBrown3 text-6xl font-bold mx-auto tracking-widest mt-10 mb-4">Gift Voucher</h1>
             </div>
 
-            <div className="flex w-9/12 mt-24 mx-auto">
-            <Discount />
-            </div>
+            <p className="text-center text-2xl tracking-widest mx-36">Treat Your Favorite Food-Lover To One Of Our Golden Tickets - Pick Something Special And Choose From A Variety Of Restaurant
+                Experiences Ranging From Champagene Afternoon Tea And Cocktail Masterclasses To Bespoke Food And Wine Dinners And Michelin-Starred Tasting Menus.</p>
 
-            <div className="sm:w-7/12 md:w-6/12 md:max-lg:5/12  w-11/12 mb-10 mx-auto ">
-
-                <div className="flex bg-cover opacity-50" style={{ backgroundImage: `url(${img1})` }}>
-
-                    <img src={logo} className="px-5 mt-5 w-11/12 mx-auto flex bg-cover opacity-50 " alt="" />
+            <div className="flex flex-row w-full justify-center space-x-10 mt-8">
+                <div className="flex  bg-customSalmon bg-opacity-50  w-[450px] h-[500px] "></div>
+                <div className="flex flex-col items-center ">
+                    <h1 className="text-3xl tracking-widest ml-20 font-bold">Terms And Conditions</h1>
+                    <div className="flex flex-col items-center text-2xl tracking-widest mt-6 ml-20">
+                    <p >This Voucher Is Valid 48 Hours After</p>
+                    <p >Purchase, For 12 Months.</p>
+                    </div>
+                        <Discount />
+                   
                 </div>
+           </div>
+           
+
                
-                <div className="px-3 text-customBlack2 bg-customPink2" >
-                    <h1 className="text-xl font-semibold ">Packaging and delivery</h1>
-                    <h1 className="mt-4">
-                        Add your personal message during the checkout process and choose to
-                        have your voucher delivered in our beautiful gift packaging or via
-                        email.
-                    </h1>
-                    <div className="flex mt-5 justify-between">
-                        <li>Email delivery</li>
-                        <h1>FREE</h1>
-                    </div>
-                    <div className="flex justify-between">
-                        <li>Royal Mail 1st Class</li>
-                        <h1>£2.95</h1>
-                    </div>
-                    <div className="flex justify-between">
-                        <li>Royal Mail Special Delivery</li>
-                        <h1>£7.95</h1>
-                    </div>
-                </div>
-                <div className="flex border-l-0 border-r-0  items-center justify-between py-6 px-4 border border-customBlack2 bg-customPink2">
-                    <h1 className="text-customBrown2">Ask a Question</h1>
-                    <IoIosArrowForward className="text-2xl text-customBrown2" />
-                </div>
-                <div className="flex border-l-0 border-t-0 border-r-0 items-center justify-between py-6 px-4 border bg-customPink2">
-                    <h1 className="text-customBrown2">Terms and Conditions</h1>
-                    <IoIosArrowForward className="text-2xl text-customBrown2" />
-                </div>
-            </div>
                 
-        </div>
-            
+        
+        </div>    
     );
 }

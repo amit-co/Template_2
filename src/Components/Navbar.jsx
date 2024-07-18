@@ -27,7 +27,12 @@ export default function Navbar() {
     const pathsWithoutNavbar = [
         "/",
         "/menu",
+        "/giftVoucher",
         "/privateDinning",
+        "/gallery",
+        "/gallery/food",
+        "/gallery/drinks",
+        "/gallery/teams",
        
 
     ];
