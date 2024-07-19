@@ -8,13 +8,13 @@ export default function Gift() {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-cover pb-10" style={{ backgroundImage: `url(${img2})` }}>
+        <div className="bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${img2})` }}>
             <div className="flex flex-row mr-8 ">
                 <button
                     className="self-start mt-10 ml-10"
                     onClick={() => navigate('/')}
                 >
-                    <img src={back} alt="backward" className="w-10 h-10 " />
+                    <img src={back} alt="backward" className="w-10 h-10 object-contain" />
                 </button>
                 <h1 className="text-customBrown3 text-6xl font-bold mx-auto tracking-widest mt-10 mb-4">Gift Voucher</h1>
             </div>
@@ -33,12 +33,7 @@ export default function Gift() {
                         <Discount />
                    
                 </div>
-           </div>
-           
-
-               
-                
-        
+           </div>        
         </div>    
     );
 }

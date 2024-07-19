@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
+import { useEffect } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from "@vercel/analytics/react";
 import BookNow from './Pages/BookNow';
@@ -14,7 +15,7 @@ const Contact = lazy(() => import("./Pages/Contact"));
 const Team = lazy(() => import("./Pages/Team"));
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery";
-import Navbar from "./Components/Navbar";
+import { Navbar } from "./Components/Navbar";
 import { Caring } from "./Components/Caring";
 import { Sociable } from "./Components/Sociable";
 import Food from "./Pages/Food";
@@ -25,12 +26,22 @@ import Venue from "./Pages/Venue";
 import Refund from "./Pages/Refund";
 
 function App() {
+    const ScrollToTop = () => {
+        const { pathname } = useLocation();
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [pathname]);
+
+        return null;
+    };
     
     return (
        
             <div className="relative overflow-x-hidden">
             <BrowserRouter>
-                <Navbar  />
+                <ScrollToTop />
+                <Navbar />
                 <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/bookNow" element={<BookNow />} />

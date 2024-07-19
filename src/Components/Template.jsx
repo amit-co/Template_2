@@ -40,20 +40,20 @@ export default function Template({ images, Heading }) {
                     </button>
                     <h1 className=" font-bold tracking-widest text-customBrown3 text-6xl mb-2 mt-10 mx-auto">{Heading}</h1>
               
-            </div>
+                </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 mx-auto p-5">
+               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 mx-auto p-5">
                 {images.slice(0, visibleImagesCount).map((image, index) => (
                     <div key={index} className="relative">
                         <img
                             src={image}
                             alt={`gallery ${index + 1}`}
-                            className="cursor-pointer w-full h-full object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                            className="cursor-pointer w-full h-60 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
                             onClick={() => handleImageClick(index)}
                         />
                     </div>
                 ))}
-            </div>
+               </div>
             {visibleImagesCount < images.length && (
                 <div className="text-center mt-6">
                     <button

@@ -39,13 +39,13 @@ export default function VenueTemplate({ venueInfo }) {
                                       </p>
                               
                          </div>     
-                              <div className="flex xl:flex-row flex-col w-[611px]  lg:w-full lg:h-full">
-                                 <div className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
-                                 <div className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
-                              </div>
-                              <div className="flex xl:flex-row flex-col w-full  space-y-12 mr-2 ml-14">
-                             <div className="bg-no-repeat h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
-                             <div className="bg-no-repeat h-[400px] ml-48 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 right-44 " /></div>
+                             <div className="flex xl:flex-row flex-col w-[611px]  lg:w-full lg:h-full">
+                              <div onClick={() => navigate("/gallery/drinks")} className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
+                              <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
+                             </div>
+                             <div className="flex xl:flex-row flex-col w-full  space-y-12 mr-2 ml-14">
+                                <div onClick={() => navigate("/gallery/food")}  className="bg-no-repeat h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
+                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat h-[400px] ml-48 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 right-44 " /></div>
                              </div>
              
               </div>

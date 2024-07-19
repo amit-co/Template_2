@@ -37,23 +37,22 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
-                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-6 mt-12">
-                            <a href="/" className="hover:text-blue-500">Home</a>
-                            <a href="/bookNow" className="hover:text-blue-500">Book Now</a>
-                            <a href="/menu" className="hover:text-blue-500">Menu</a>
-                            <a href="/venue" className="hover:text-blue-500">Venue</a>
-                            <a href="/privateDinning" className="hover:text-blue-500">Private Dining</a>
-                            <a href="/gallery" className="hover:text-blue-500">Gallery</a>
-                            <a href="/giftVoucher" className="hover:text-blue-500">Gift Voucher</a>
-                            <a href="/contact" className="hover:text-blue-500">Contact</a>
-                            <a href="/about" className="hover:text-blue-500">About</a>
+                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-6 mt-20">
+                            <a href="/" className="hover:text-blue-500">HOME</a>
+                            <a href="/menu" className="hover:text-blue-500">MENU</a>
+                            <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
+                            <a href="/gallery" className="hover:text-blue-500">GALLERY</a>
+                            <a href="/" className="hover:text-blue-500">CONTACT</a>
+                            <a href="/about" className="hover:text-blue-500">ABOUT</a>
+
+
                         </nav>
                     </div>
                 </div>
                 <BookNow />
                 <Menus />
                 <Venue />
-                <div>
+                
                     <div className="flex flex-col bg-customTeal">
                         <div className="flex flex-row w-fit items-center mx-auto sm:mt-[10vh] ml-12">
                             <img src={camera} className="w-12 lg:w-24 h-12 lg:h-24" />
@@ -86,7 +85,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 <RestrauntLocation />
                 
             </div>

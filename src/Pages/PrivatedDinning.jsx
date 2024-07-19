@@ -116,7 +116,7 @@ export default function PrivateDinning() {
 
     return (
         
-        <div className="bg-cover pb-10 " style={{ backgroundImage: `url(${img4})` }}>
+        <div className="bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${img4})` }}>
             <div className="flex flex-row mr-8 ">
             <button
                 className="self-start mt-10 ml-10"
