@@ -22,7 +22,7 @@ export default function Gift() {
             <p className="text-center text-2xl tracking-widest mx-36">Treat Your Favorite Food-Lover To One Of Our Golden Tickets - Pick Something Special And Choose From A Variety Of Restaurant
                 Experiences Ranging From Champagene Afternoon Tea And Cocktail Masterclasses To Bespoke Food And Wine Dinners And Michelin-Starred Tasting Menus.</p>
 
-            <div className="flex flex-row w-full justify-center space-x-10 mt-8">
+            <div className="flex xl:flex-row flex-col w-full justify-center space-x-10 mt-8">
                 <div className="flex  bg-customSalmon bg-opacity-50  w-[450px] h-[500px] "></div>
                 <div className="flex flex-col items-center ">
                     <h1 className="text-3xl tracking-widest ml-20 font-bold">Terms And Conditions</h1>

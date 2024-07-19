@@ -9,6 +9,7 @@ import bar from "/New/Group 33.png";
 import cafe from "/New/Group 109.png";
 import pd from "/New/Group 110.png";
 import ird from "/New/Group 111.png";
+import imgB from "/New/bgn.png";
 
 
 export default function VenueTemplate({ venueInfo }) {
@@ -22,12 +23,12 @@ export default function VenueTemplate({ venueInfo }) {
         <div>
      
                                
-              <div className=" flex flex-col fixed w-full h-full  items-center relative mt-14 mx-auto bg-cover mb-10" >
+          <div className=" flex flex-col fixed w-full h-full  items-center relative mt-14 mx-auto bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${imgB})` }}>
                           <h1 className="sm:text-5xl text-4xl tracking-widest text-customBrown3 font-bold mb-4 text-center">
                                             {venueInfo.venueType}
                           </h1>
 
-                         <div className="flex flex-col w-56 lg:w-[100vw] justify-center mx-auto mb-8">
+                         <div className="flex flex-col sm:w-56 w-full lg:w-[100vw] justify-center mx-auto mb-8">
                   <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4  whitespace-break-spaces">
                                       The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
                                       </h1>
@@ -39,13 +40,13 @@ export default function VenueTemplate({ venueInfo }) {
                                       </p>
                               
                          </div>     
-                             <div className="flex xl:flex-row flex-col w-[611px]  lg:w-full lg:h-full">
-                              <div onClick={() => navigate("/gallery/drinks")} className=" bg-no-repeat h-[80vh] sm:ml-20 sm:mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
-                              <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat mr-28 sm:w-1/2 lg:w-1/3 xl:w-2/6 mt-28 relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96" /></div>
+                             <div className="flex sm:flex-row flex-col w-[611px]  sm:w-full sm:h-full">
+                              <div onClick={() => navigate("/gallery/drinks")} className=" bg-no-repeat sm:h-[80vh] sm:ml-20 mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
+                  <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:h-[400px] ml-48 rounded-md mr-4 mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96 " /></div>
                              </div>
-                             <div className="flex xl:flex-row flex-col w-full  space-y-12 mr-2 ml-14">
-                                <div onClick={() => navigate("/gallery/food")}  className="bg-no-repeat h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
-                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat h-[400px] ml-48 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 right-44 " /></div>
+                             <div className="flex sm:flex-row flex-col w-full  space-y-12 mr-2 mt-30  xl:mt-30 sm:ml-14 ml-20">
+                                <div onClick={() => navigate("/gallery/food")}  className="bg-no-repeat sm:h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
+                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:h-[400px] sm:ml-48 ml-32 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 sm:right-44 right-36" /></div>
                              </div>
              
               </div>

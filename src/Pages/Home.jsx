@@ -1,6 +1,6 @@
 import logo from "/New/logo3.png";
 import cmpny from "/New/logo.png";
-import img from "/New/home_bg.png";
+import img from "/drinksImages/Drinks1.jpeg";
 import BookNow from "./BookNow";
 import { Menus } from "../Components/Menus";
 import Venue from "./Venue";
@@ -10,10 +10,11 @@ import camera from "/New/camera.png";
 import img1 from "/New/gallery1.png";
 import img2 from "/New/gallery2.png";
 import img3 from "/New/gallery3.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="bg-cover " style={{ backgroundImage: `url(${imgB})` }}>
@@ -39,7 +40,7 @@ export default function Home() {
                     <div className="flex flex-col items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
                         <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-6 mt-20">
                             <a href="/" className="hover:text-blue-500">HOME</a>
-                            <a href="/menu" className="hover:text-blue-500">MENU</a>
+                            <a href="/venue" className="hover:text-blue-500">VENUE</a>
                             <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
                             <a href="/gallery" className="hover:text-blue-500">GALLERY</a>
                             <a href="/" className="hover:text-blue-500">CONTACT</a>
@@ -51,43 +52,47 @@ export default function Home() {
                 </div>
                 <BookNow />
                 <Menus />
+                <div className="-mt-28">
                 <Venue />
-                
-                    <div className="flex flex-col bg-customTeal">
+                </div>
+                    <div className="flex flex-col  bg-customTeal">
                         <div className="flex flex-row w-fit items-center mx-auto sm:mt-[10vh] ml-12">
                             <img src={camera} className="w-12 lg:w-24 h-12 lg:h-24" />
-                            <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-2xl lg:text-5xl">Gallery</h1>
+                            <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-4xl ml-20 sm:ml-0 lg:text-5xl">Gallery</h1>
                         </div>
-                        <div className="md:flex w-full h-full items-center md:space-x-5 md:space-y-0 space-y-5 md:p-10 justify-between">
+                        <div className="md:flex w-full h-full items-center md:space-x-5 md:space-y-0 space-y-5 md:p-10 justify-between mt-4 pb-6">
                             <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                 <Link to="/gallery/food">
-                                <img src={img1}  className="w-full h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
+                                <img src={img1}  className="sm:w-full w-[75%] mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
                                 </Link>
                                     <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    <h2 className="text-6xl">Food</h2>
+                                    <h2 className="text-6xl ml-10 sm:ml-0">Food</h2>
                                 </div>
                             </div>
                             <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                 <Link to="/gallery/drinks">
-                                <img src={img2} className="w-full h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
+                                <img src={img2} className="sm:w-full w-88 mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
                                 </Link>
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    <h2 className="text-6xl">Drinks</h2>
+                                    <h2 className="text-6xl ml-10 sm:ml-0">Drinks</h2>
                                 </div>
                             </div>
                                 <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                     <Link to="/gallery/teams">
-                                <img src={img3} className="w-full h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
+                                <img src={img3} className="sm:w-full w-88 mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
                                 </Link>
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    <h2 className="text-6xl">Team</h2>
+                                    <h2 className="text-6xl ml-10 sm:ml-0">Team</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                 
                 <RestrauntLocation />
-                
+                <div className="flex flex-col items-center  pb-4">
+                    <h1 className="text-4xl">Want To Know More ?</h1>
+                    <button onClick={() => navigate("/about")} className="border bg-customTeal text-3xl px-4 py-2 rounded-lg">About Us</button>
+                </div>
             </div>
         </>
     );

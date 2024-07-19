@@ -30,7 +30,7 @@ export default function Template({ images, Heading }) {
 
     return (
         <>
-            <div className="bg-cover pb-10 " style={{ backgroundImage: `url(${imgB})` }}>
+            <div className="bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${imgB})` }}>
                 <div className=" flex flex-row  mr-10" >
                     <button
                         className="self-start mt-10 ml-10"

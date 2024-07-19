@@ -13,7 +13,7 @@ export function Menus() {
                     <img src={menu} className="relative  w-1/2 sm:w-auto -mb-10" />
                     
                 <div className="flex flex-col sm:flex-row items-center mx-10 xl:space-x-10 space-y-4 sm:space-y-0">
-                    <div className="flex w-1/2 sm:w-full ml-10 sm:ml-0 mt-4 sm:mt-0">
+                    <div className="flex w-full sm:w-full  sm:ml-0 mt-10 sm:mt-0">
                         <p className="text-2xl text-center font-medium text-gray-900">
                             OXBO Is A Destination For The Local Community, As Well As those visiting the city. Our sociable staff help to create a communal feel, building relationships with regulars and welcoming new customers. Our menus are designed
                             with groups in mind - sharing platters and pitchers celebrate the union of delicious food and great conversation.
@@ -21,15 +21,15 @@ export function Menus() {
                             as the occasion dictates or as the mood changes from breakfast to late. Our spaces are large enough to accommodate gatherings and groups, with clever partitions or sliding panels that can be used to create smaller areas with a cozier feel. Seating arrangements reflect and respect single diners and drinkers too.
                         </p>
                     </div>
-                    <div className="flex w-1/2 sm:w-full sm:ml-0">
+                    <div className="flex w-full sm:w-full sm:ml-0">
                         <img src={img10} />
                     </div>
                 </div>
             </div>
-            <div className="flex xl:flex-row flex-col mx-auto flex-wrap space-x-32 space-y-4 justify-center h-full">
-                <img src={b3} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
-                <img src={b1} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
-                <img src={b4} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
+            <div className="flex flex-row w-full sm:mx-auto sm:flex-wrap sm:space-x-32 space-x-2  sm:justify-center h-full">
+                <img src={b3} className="w-4/12 sm:w-1/2 lg:w-1/4 mx-auto rounded-lg" />
+                <img src={b1} className="w-4/12 sm:w-1/2 lg:w-1/4 mx-auto rounded-lg" />
+                <img src={b4} className="w-4/12 sm:w-1/2 lg:w-1/4 mx-auto rounded-lg" />
                 
             </div>
         </>

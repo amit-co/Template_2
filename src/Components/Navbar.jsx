@@ -21,21 +21,23 @@ export function Navbar() {
 
     const pathsWithoutNavbar = [
         "/",
-       
-
-
     ];
-
-    const shouldRenderNavbar = !pathsWithoutNavbar.includes(pathname); // Check if the current path is not in the list
-
+    const shouldRenderNavbar = !pathsWithoutNavbar.includes(pathname); 
     if (!shouldRenderNavbar) {
-        return null; // Return null to prevent rendering the navbar
+        return null; 
     }
 
     return (
         <div className={`fixed top-0 left-0 right-0 z-10 transition-transform duration-300 `}>
-            <div className={` top-0 left-0 right-0 z-10 transition-transform duration-300 `}>
-                <div className="text-white">
+            
+              
+            <div className={`flex  bg-customWhite justify-between  text-xl items-center justify-around sm:py-4 `}
+
+            >
+                <button onClick={() => navigate("/")} className="flex w-20 text-center ">
+                    <h1 className="text-black  text-4xl">Restaurant Name</h1>
+                </button>
+                <div className="text-customBrown ">
                     {toggle ? (
                         <RxCross2
                             onClick={() => setToggle(false)}
@@ -48,41 +50,34 @@ export function Navbar() {
                         />
                     )}
                 </div>
-                <div className={`bg-customWhite text-white  flex justify-between px-10 items-center transition-opacity duration-300 `}
+                    
 
-                >
-                    <button onClick={() => navigate("/")} className="flex w-20 text-center py-6">
-                        <h1 className="text-black text-4xl">Restaurant Name</h1>
-                    </button>
-
-                    <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
-
-                    >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 text-customBlack2  text-2xl font-medium xl:space-x-32 mr-28  2xl:space-x-16">
-                            <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
+                    
+                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 text-customBlack2 text-xl font-medium xl:space-x-32  2xl:space-x-16">
+                            <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
                                 <h1>PRIVATE DINING</h1>
-                                <div className={`w-full absolute ${selectedNav === '/privateDinning' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
+                                
                             </Link>
-                            <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/about')}>
+                            <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/about')}>
                                 <h1>ABOUT US</h1>
-                                <div className={`w-full absolute ${selectedNav === '/about' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
+                                
                             </Link>
-                            <Link to="/menu" className={`group relative ${selectedNav === '/menu' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/menu')}>
+                            <Link to="/menu" className={`group relative ${selectedNav === '/menu' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/menu')}>
                                 <h1>MENU</h1>
-                                <div className={`w-full absolute ${selectedNav === '/menu' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
+                               
                             </Link>
-                            <Link to="/giftVoucher" className={`group relative ${selectedNav === '/giftVoucher' ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => handleNavClick('/giftVoucher')}>
+                            <Link to="/giftVoucher" className={`group relative ${selectedNav === '/giftVoucher' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/giftVoucher')}>
                                 <h1>GIFT VOUCHER</h1>
-                                <div className={`w-full absolute ${selectedNav === '/contact' ? 'block' : 'hidden'} absolute h-[4px] bg-customBlack2`}></div>
+                                
                             </Link>
                         </div>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
 
-            <div className={` bg-repeat w-full transition-all duration-500 ease-in-out text-customBrown text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
-                style={{ backgroundImage: `url(${img})` }}
+            <div className={` bg-customBrown3 w-full transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
+                
             >
                 <Link to="/" className="cursor-pointer ">
                     <h1
