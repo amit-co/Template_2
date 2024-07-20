@@ -1,58 +1,48 @@
 import { team } from "../utils/TeamInfo";
-import { Quote } from "../Components/Quote";
-import img from "/Textures/4523.png";
+import back from "/buttons/Group 146.png";
 import img0 from "/teamImages/img0.jpeg";
-import img1 from "/Textures/4525.png";
+import imgB from "/New/bgn.png";
+import { useNavigate } from 'react-router-dom';
 
 export default function Team() {
+    const navigate = useNavigate();
     // Separate the first team member from the rest
     const [firstMember, ...restOfTeam] = team;
 
     return (
         <>
-            <div className="bg-repeat mt-[32vh]" style={{ backgroundImage: `url(${img1})` }}>
-                <div className="w-fit mx-auto mb-3">
-                    <h1 className="text-customGray tracking-widest font-bold text-center text-6xl">THE TEAM</h1>
-                    
+            <div className="bg-repeat pb-10 pt-28" style={{ backgroundImage: `url(${imgB})` }}>
+                <div className="flex flex-row mr-10">
+                    <button
+                        className="self-start mt-10 ml-10"
+                        onClick={() => navigate('/')}
+                    >
+                        <img src={back} alt="backward" className="w-10 h-10 object-contain" />
+                    </button>
+                    <h1 className="font-bold tracking-widest text-customBrown3 text-6xl mb-2 mt-10 mx-auto">TEAMS</h1>
                 </div>
-                <div className="h-[3px] bg-gradient-to-r from-transparent via-gray-600  to-transparent mx-16 "></div>
 
                 {/* Centered first team member */}
                 <div className="w-full flex justify-center mt-10">
-                    <div className="bg-no-repeat h-72 rounded-md sm:ml-7 sm:mt-4 lg:w-[20vw] py-6 bg-cover shadow-lg" style={{ backgroundImage: `url(${ img0 })` }}>
-                       
-                        <div className="bg-repeat w-[44vh] h-[24vh] items-center flex flex-wrap text-customBrown ml-52 mt-28 rounded-md" style={{ backgroundImage: `url(${img})` }}>
-                            <div className="mx-12">
-                        <h1 className="text-center text-lg font-semibold  ">{firstMember.name}</h1>
-                        <h1 className="text-center text-xl">{firstMember.designation}</h1>
-                        <h1 className="text-center">{firstMember.email}</h1>
-                                <h1 className="text-center">{firstMember.phoneNO}</h1>
-                                </div>
-                            </div>
+                    <div className="bg-no-repeat bg-cover cursor-pointer w-[90vw] md:w-[40vw] lg:w-[20vw] h-72 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" style={{ backgroundImage: `url(${img0})` }}>
                     </div>
                 </div>
 
                 {/* Remaining team members */}
-                <div className="grid sm:space-x-7 space-y-4 w-11/12 sm:w-11/12 mt-10 mx-auto lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 mx-auto p-5">
                     {restOfTeam.map((value, index) => (
-                        
-                            <div key={index + 1} className="bg-no-repeat h-72 rounded-md sm:ml-7 sm:mt-4 lg:w-[20vw] py-6 bg-cover shadow-lg" style={{ backgroundImage: `url(${value.imageUrl})` }}>
-                            
-                            <div className="bg-repeat w-[44vh] h-[24vh] items-center flex flex-wrap text-customBrown ml-52 mt-28 rounded-md" style={{ backgroundImage: `url(${img})` }}>
-                            <div className="mx-12">
-                            <h1 className="text-center text-lg font-semibold">{value.name}</h1>
-                            <h1 className="text-center text-xl">{value.designation}</h1>
-                            <h1 className="text-center">{value.email}</h1>
-                                <h1 className="text-center">{value.phoneNO}</h1>
-                                </div>
-                                </div>
-                            </div>
-                            
+                        <div key={index + 1} className="bg-no-repeat bg-cover cursor-pointer w-[90vw] md:w-[40vw] lg:w-[20vw] h-72 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" style={{ backgroundImage: `url(${value.imageUrl})` }}>
+                        </div>
                     ))}
                 </div>
-            </div>
-            <div className="w-10/12 mx-auto">
-                <Quote />
+                <div className="text-center mt-6">
+                    <button
+                        
+                        className="text-customBlack2 text-lg mt-5  tracking-widest rounded-lg w-fit px-10 py-4 font-semibold bg-customSalmon "
+                    >
+                        Load More
+                    </button>
+                </div>
             </div>
         </>
     );

@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\fonts",
     "\\src\\Pages"
   ],
-  "SelectedNode": "\\src\\Pages\\BookNow.jsx",
+  "SelectedNode": "\\src\\Components\\VenueTemplate.jsx",
   "PreviewInSolutionExplorer": false
 }

@@ -76,7 +76,7 @@ export function Reservation() {
         <div className="flex xl:flex-row  flex-col items-center xl:space-x-20 p-6 ">
             <div>
                 <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
                     <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                         {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
                             <option key={number} value={number}>{number} People</option>
@@ -87,7 +87,7 @@ export function Reservation() {
             </div>
             <div>
             <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
                     <DatePicker
                         selected={new Date(selectedDate)}
                         onChange={handleDateChange}
@@ -102,7 +102,7 @@ export function Reservation() {
             </div>
             <div>
                 <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
                 <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                         {generateTimeOptions().map(time => (
                             <option key={time} value={time}>
@@ -114,7 +114,7 @@ export function Reservation() {
                 </div>
             </div>
            
-            <button onClick={clickHandler} className="w-[40vh] h-14 mt-8 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded transition duration-300 hover:bg-orange-600">
+            <button onClick={clickHandler} className="sm:w-[40vh] w-56 h-14 mt-8 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded-lg transition duration-300 hover:bg-orange-600">
                     Find a Table
                 </button>
                 

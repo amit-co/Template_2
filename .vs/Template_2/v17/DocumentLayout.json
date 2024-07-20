@@ -1,42 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\ReserveOcean\\Source Code\\Template_2\\",
+  "WorkspaceRootPath": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\BookNow.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\BookNow.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Venue.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Venue.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Quote.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Components\\Quote.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\VenueTemplate.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\VenueTemplate.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Components\\VenueTemplate.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\PrivatedDinning.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\PrivatedDinning.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\GiftVoucher.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\GiftVoucher.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Venue.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Pages\\Venue.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,61 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookNow.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\BookNow.jsx",
-              "RelativeDocumentMoniker": "src\\Pages\\BookNow.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\BookNow.jsx",
-              "RelativeToolTip": "src\\Pages\\BookNow.jsx",
-              "ViewState": "AQIAANgAAAAAAAAAAAD4vy8AAACGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T04:54:42.146Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\App.jsx",
-              "RelativeDocumentMoniker": "src\\App.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\App.jsx",
-              "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAABAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T07:27:56.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Navbar.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Navbar.jsx",
-              "RelativeDocumentMoniker": "src\\Components\\Navbar.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Navbar.jsx",
-              "RelativeToolTip": "src\\Components\\Navbar.jsx",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAsAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T07:26:00.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Quote.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Quote.jsx",
-              "RelativeDocumentMoniker": "src\\Components\\Quote.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\Quote.jsx",
-              "RelativeToolTip": "src\\Components\\Quote.jsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T07:25:59.601Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -115,64 +46,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Venue.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Venue.jsx",
-              "RelativeDocumentMoniker": "src\\Pages\\Venue.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Venue.jsx",
-              "RelativeToolTip": "src\\Pages\\Venue.jsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAsAAAA",
+              "DocumentIndex": 0,
+              "Title": "VenueTemplate.jsx",
+              "DocumentMoniker": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\VenueTemplate.jsx",
+              "RelativeDocumentMoniker": "src\\Components\\VenueTemplate.jsx",
+              "ToolTip": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\VenueTemplate.jsx",
+              "RelativeToolTip": "src\\Components\\VenueTemplate.jsx",
+              "ViewState": "AQIAAAMAAAAwXWZmZqYowBkAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T05:09:28.264Z",
+              "WhenOpened": "2024-07-19T16:04:08.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VenueTemplate.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\VenueTemplate.jsx",
-              "RelativeDocumentMoniker": "src\\Components\\VenueTemplate.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Components\\VenueTemplate.jsx",
-              "RelativeToolTip": "src\\Components\\VenueTemplate.jsx",
-              "ViewState": "AQIAADcAAAAAAAAAAAAQwEEAAAAsAAAA",
+              "DocumentIndex": 3,
+              "Title": "Venue.jsx",
+              "DocumentMoniker": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Venue.jsx",
+              "RelativeDocumentMoniker": "src\\Pages\\Venue.jsx",
+              "ToolTip": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Venue.jsx",
+              "RelativeToolTip": "src\\Pages\\Venue.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T05:07:45.509Z"
+              "WhenOpened": "2024-07-19T16:03:55.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PrivatedDinning.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\PrivatedDinning.jsx",
-              "RelativeDocumentMoniker": "src\\Pages\\PrivatedDinning.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\PrivatedDinning.jsx",
-              "RelativeToolTip": "src\\Pages\\PrivatedDinning.jsx",
-              "ViewState": "AQIAALkAAAAAAAAAAAAAwHkAAABoAAAA",
+              "DocumentIndex": 4,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "src\\Components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Components\\Navbar.jsx",
+              "RelativeToolTip": "src\\Components\\Navbar.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T05:06:00.397Z"
+              "WhenOpened": "2024-07-19T16:01:17.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Contact.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Contact.jsx",
-              "RelativeDocumentMoniker": "src\\Pages\\Contact.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Contact.jsx",
-              "RelativeToolTip": "src\\Pages\\Contact.jsx",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T05:04:48.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Home.jsx",
-              "DocumentMoniker": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Home.jsx",
+              "DocumentMoniker": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Home.jsx",
               "RelativeDocumentMoniker": "src\\Pages\\Home.jsx",
-              "ToolTip": "G:\\ReserveOcean\\Source Code\\Template_2\\src\\Pages\\Home.jsx",
+              "ToolTip": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\Home.jsx",
               "RelativeToolTip": "src\\Pages\\Home.jsx",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwDEAAAAWAAAA",
+              "ViewState": "AQIAACUAAABAMzMzMzMrwDYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-07-12T04:51:13.674Z",
+              "WhenOpened": "2024-07-19T15:52:28.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GiftVoucher.jsx",
+              "DocumentMoniker": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\GiftVoucher.jsx",
+              "RelativeDocumentMoniker": "src\\Pages\\GiftVoucher.jsx",
+              "ToolTip": "C:\\Users\\raman\\source\\repos\\Templates\\Template_2\\src\\Pages\\GiftVoucher.jsx",
+              "RelativeToolTip": "src\\Pages\\GiftVoucher.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-07-19T15:40:14.16Z",
               "EditorCaption": ""
             }
           ]

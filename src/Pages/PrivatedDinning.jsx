@@ -17,7 +17,7 @@ const SelectField = ({ name, value, onChange, options }) => (
             name={name}
             value={value}
             onChange={onChange}
-            className="bg-clip-text text-xl text-black-700 w-[40vh] px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+            className="bg-clip-text text-xl text-black-700 sm:w-[40vh] w-72 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
 
         >
             {options.map((option) => (
@@ -116,20 +116,18 @@ export default function PrivateDinning() {
 
     return (
         
-        <div className="bg-cover pb-10 " style={{ backgroundImage: `url(${img4})` }}>
+        <div className="bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${img4})` }}>
             <div className="flex flex-row mr-8 ">
-            <button
-                className="self-start mt-10 ml-10"
-                onClick={() => navigate('/')}
-            >
-                <img src={back} alt="backward" className="w-10 h-10 object-contain" />
-            </button>
+                    <button
+                        className="self-start mt-10 ml-10"
+                        onClick={() => navigate('/')}
+                       >
+                        <img src={back} alt="backward" className="w-10 h-10 object-contain" />
+                    </button>
          
-                <h1 className="md:text-5xl text-3xl tracking-widest text-customBrown3 font-bold mt-10 mx-auto">
-                        PRIVATE DINING
-               </h1>
+                <h1 className="md:text-5xl text-3xl tracking-widest text-customBrown3 font-bold mt-10 mx-auto">PRIVATE DINING</h1>
             </div>
-                      <p className="md:w-10/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
+                     <p className="md:w-10/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
                             Your Perfect Destination For Any Occasion, Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments
                             That Can Be Used In Different Ways, As The Occasion Dictates Or As The Mood Changes From Breakfast To Late. Our Spaces Are Large Enough To Accommodate
                             Gatherings And Groups, With Clever Partitions Or Sliding Pagels That Can Be Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements
@@ -138,12 +136,12 @@ export default function PrivateDinning() {
                   
           
             <div className="bg-customSalmon bg-opacity-25 mb-3 mt-10 rounded-lg mx-16 py-10 " >
-                <div className="flex flex-row mx-16 space-x-24">
-                    <img src={sp1} className="object-contain" />
+                <div className="flex sm:flex-row flex-col space-y-24 px-16  sm:space-x-24">
+                    <img src={sp1} className="object-contain mt-10" />
                 <div className="flex flex-col  items-center ">
                     <div >
                         <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14 ">
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14 ">
                             <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                                 {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
                                     <option key={number} value={number}>{number} People</option>
@@ -151,10 +149,10 @@ export default function PrivateDinning() {
                             </select>
                             <GoPeople className="absolute left-3 text-xl " />
                         </div>
-                        </div>
+                    </div>
                         <div className="mt-2">
                         <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
                             <DatePicker
                                 selected={new Date(selectedDate)}
                                 onChange={handleDateChange}
@@ -169,7 +167,7 @@ export default function PrivateDinning() {
                         </div>
                         <div className="mt-2">
                         <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg w-[40vh] h-14">
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
                             <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                                 {generateTimeOptions().map(time => (
                                     <option key={time} value={time}>
@@ -180,7 +178,7 @@ export default function PrivateDinning() {
                             <LuClock className="absolute left-3 text-xl " />
                         </div>
                         </div>
-                        <div className="mt-2">
+                    <div className="mt-2 ">
                         <h1 className="text-2xl tracking-widest font-semibold ">Occassion</h1>
                         
                         <div className="relative flex items-center ">
@@ -212,7 +210,7 @@ export default function PrivateDinning() {
                                 name="message"
                                 onChange={handleChange}
                                 value={formData.message}
-                                className="bg-clip-text w-[40vh] text-black-700 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+                                className="bg-clip-text sm:w-[40vh] w-72 text-black-700 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
                                 rows="5"
                                 id="message"
                             ></textarea>
@@ -220,7 +218,7 @@ export default function PrivateDinning() {
                     </div>
 
 
-                    <button onClick={clickHandler} className="w-[25vh] h-14 mt-2 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded transition duration-300 hover:bg-orange-600">
+                    <button onClick={clickHandler} className="sm:w-[25vh] w-60 h-14 mt-4 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded-lg transition duration-300 hover:bg-orange-600">
                         Find a Table
                     </button>
 
