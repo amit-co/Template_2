@@ -18,10 +18,10 @@ export default function Discount() {
         <div className="md:flex ">
 
             <div className="  w-full   md:w-full mt-4">
-                <h1 className="text-customBlack2 text-3xl tracking-widest font-bold ml-14">From</h1>
-                <h1 className="font-normal mt-1 text-3xl ml-14">$10.00</h1>
+                <h1 className="text-customBlack2 text-3xl tracking-widest font-bold ml-12 md:ml-14">From</h1>
+                <h1 className="font-normal mt-1 text-2xl md:text-3xl ml-14">$10.00</h1>
                 <div className="flex flex-col  ">
-                    <label htmlFor="input" className="text-customBlack2 text-3xl mx-auto">Enter amount</label>
+                    <label htmlFor="input" className="text-customBlack2 text-2xl md:text-3xl mx-auto">Enter amount</label>
                     <input
                         type="text"
                         id="input"
@@ -48,7 +48,7 @@ export default function Discount() {
                         <input
                             type="number"
                             className={`outline-none h-[40px]   bg-white ${quantity < 10 ? "pl-6 md:max-lg:pl-5" : "sm:pl-7 md:max-lg:pl-5"
-                                } sm:text-lg lg:w-[10vh] md:w-[60px] w-[20vh] `}
+                                } sm:text-lg lg:w-[10vh] md:w-[60px] w-[14vh] `}
                             value={quantity}
                             onChange={handleQuantityChange}
                         />

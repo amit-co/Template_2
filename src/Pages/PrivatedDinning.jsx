@@ -1,4 +1,4 @@
-import DatePicker from "react-datepicker";
+    import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState, useEffect } from "react";
 import { LuClock } from "react-icons/lu";
@@ -125,9 +125,9 @@ export default function PrivateDinning() {
                         <img src={back} alt="backward" className="w-10 h-10 object-contain" />
                     </button>
          
-                <h1 className="md:text-5xl text-3xl tracking-widest text-customBrown3 font-bold mt-10 mx-auto">PRIVATE DINING</h1>
+                <h1 className="md:text-5xl text-3xl tracking-widest text-customBrown3 font-bold mt-10 ml-8 mx-auto">PRIVATE DINING</h1>
             </div>
-                     <p className="md:w-10/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
+                     <p className="w-11/12 text-center mt-10 text-xl lg:text-2xl  font-medium text-black-900 mx-auto">
                             Your Perfect Destination For Any Occasion, Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments
                             That Can Be Used In Different Ways, As The Occasion Dictates Or As The Mood Changes From Breakfast To Late. Our Spaces Are Large Enough To Accommodate
                             Gatherings And Groups, With Clever Partitions Or Sliding Pagels That Can Be Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements
@@ -135,9 +135,9 @@ export default function PrivateDinning() {
                      </p>
                   
           
-            <div className="bg-customSalmon bg-opacity-25 mb-3 mt-10 rounded-lg mx-16 py-10 " >
-                <div className="flex sm:flex-row flex-col space-y-24 px-16  sm:space-x-24">
-                    <img src={sp1} className="object-contain mt-10" />
+            <div className="bg-customSalmon bg-opacity-25 mb-3 mt-10 rounded-lg mx-8 lg:mx-16 py-10 " >
+                <div className="flex lg:flex-row flex-col space-y-12 lg:space-y-24 px-4 lg:px-16  sm:space-x-24">
+                    <img src={sp1} className="object-contain mt-2 lg:mt-10" />
                 <div className="flex flex-col  items-center ">
                     <div >
                         <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>

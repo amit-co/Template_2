@@ -25,34 +25,34 @@ export default function Menu() {
                 <h1 className="text-customBrown3 text-6xl font-bold mx-auto tracking-widest mt-10 mb-4">MENU</h1>
             </div>
             <div className="flex flex-col  space-y-10 ">
-                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10 mx-auto  justify-center">
-                    <div className="flex flex-col bg-customSalmon bg-opacity-50 rounded-lg w-[439px] h-[300px] ">
+                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10 mx-6 lg:mx-auto  justify-center">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 rounded-lg mt-4 sm:mt-0  w-[330px] lg:w-[439px] h-[300px] ">
                         <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">In Room Dining</h1>
                         
-                        <div className="relative w-[398px] h-[243px] mx-auto">
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
                             <img src={m1} className="w-full h-full" />
                             <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
                         </div>
                     </div>
-                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[439px] rounded-lg  h-[300px]">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] rounded-lg  h-[300px]">
                         <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">Bar Menu</h1>
-                        <div className="relative w-[398px] h-[243px] mx-auto">
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
                             <img src={m2} className="w-full h-full" />
                             <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10  mx-auto justify-center">
-                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[439px] h-[300px] rounded-lg">
+                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10  mx-6 lg:mx-auto justify-center">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] h-[300px] rounded-lg">
                         <h1 className=" text-2xl text-customBrown3 font-bold text-customBrown3 font-bold tracking-widest mx-auto mt-2">Cafe</h1>
-                        <div className="relative w-[398px] h-[243px] mx-auto">
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
                             <img src={m3} className="w-[398px] h-[243px] mx-auto" />
                             <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
                         </div>
                     </div>
-                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[439px] h-[300px] rounded-lg">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] h-[300px] rounded-lg">
                         <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">Kitchen Menu</h1>
-                        <div className="relative w-[398px] h-[243px] mx-auto">
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
                         <img src={m4} className="w-[398px] h-[243px] mx-auto" />
                         <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
                     </div>
