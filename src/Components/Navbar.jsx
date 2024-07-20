@@ -9,7 +9,7 @@ import img4 from "/icons/Call.png";
 import logo from "/dark_logo.png";
 import img from "/Textures/4523.png";
 
-export function Navbar() {
+export default function Navbar() {
     const navigate = useNavigate();
 
     const { pathname } = useLocation();
@@ -17,7 +17,6 @@ export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [displayGallery, setDisplayGallery] = useState(false);
     const [displayVenue, setDisplayVenue] = useState(false);
-
     const location = useLocation();
     const [selectedNav, setSelectedNav] = useState(location.pathname);
 
@@ -27,6 +26,14 @@ export function Navbar() {
 
     const pathsWithoutNavbar = [
         "/",
+        "/menu",
+        "/giftVoucher",
+        "/privateDinning",
+        "/gallery",
+        "/gallery/food",
+        "/gallery/drinks",
+        "/gallery/teams",
+       
 
     ];
 

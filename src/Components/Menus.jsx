@@ -1,69 +1,37 @@
-import React, { useState } from 'react';
-import img from "/FoodImages/Food11.jpeg";
-import img1 from "/Textures/4525.png";
-import img2 from "/Pdf/CafeKitchen.jpg";
-import img3 from "/Pdf/IRD-Menu.jpg";
-import img4 from "/Pdf/CafeMenu.jpg";
-import img5 from "/FoodImages/BreakfastMenu.jpg";
-import barSnacks from "/FoodImages/BarSnacks.jpg";
-import logo from "/dark_logo.png";
-import bs from "/Menu/Group 15.png";
-import Ird from "/Menu/Group 16.png";
-import breakfast from "/Menu/Group 17.png";
-import kitchen from "/Menu/Group 18.png";
-import cafe from "/Menu/Group 19.png";
+import b1 from "/New/Rectangle 58.png";
+import b3 from "/New/Rectangle 60.png";
+import b4 from "/New/Rectangle 61.png";
+import menu from "/New/Group 108.png";
+import img10 from "/New/gallery1.png";
 
 export function Menus() {
-    const [selectedImage, setSelectedImage] = useState(null);
-
-    const handleMenuOpen = (image) => {
-        setSelectedImage(image);
-    };
-
-    const handleCloseModal = () => {
-        setSelectedImage(null);
-    };
+    
     return (
-        <div className="bg-repeat" style={{ backgroundImage: `url(${img1})` }}>
-            <div
-                className="bg-fixed sm:flex py-24 bg-cover"
-                style={{ backgroundImage: `url(${img})` }}
-            >
-                <div className="w-full mt-32">
-                    <div className="flex flex-wrap justify-center gap-5 mb-12">
-                        <div className="flex bg-customBeige rounded-lg w-64 md:w-80 lg:w-[400px] p-4" onClick={() => handleMenuOpen(barSnacks)}>
-                            <img src={bs} />
-                        </div>
-                        <div className="flex bg-customBeige rounded-lg w-64 md:w-80 lg:w-[400px] p-4" onClick={() => handleMenuOpen(img2)}>
-                            <img src={kitchen}  />
-                        </div>
-                        <div className="flex bg-customBeige rounded-lg w-64 md:w-80 lg:w-[400px] p-4" onClick={() => handleMenuOpen(img3)}>
-                            <img src={Ird}  />
-                        </div>
+        <>
+            <div className="flex flex-col  items-center mb-10">
+                
+                    <img src={menu} className="relative  w-1/2 sm:w-auto -mb-10" />
+                    
+                <div className="flex flex-col sm:flex-row items-center mx-10 xl:space-x-10 space-y-4 sm:space-y-0">
+                    <div className="flex w-1/2 sm:w-full ml-10 sm:ml-0 mt-4 sm:mt-0">
+                        <p className="text-2xl text-center font-medium text-gray-900">
+                            OXBO Is A Destination For The Local Community, As Well As those visiting the city. Our sociable staff help to create a communal feel, building relationships with regulars and welcoming new customers. Our menus are designed
+                            with groups in mind - sharing platters and pitchers celebrate the union of delicious food and great conversation.
+                            Our spaces are designed to be sociable. They are Multi-purpose all day dining and drinking environments that can be used in different ways,
+                            as the occasion dictates or as the mood changes from breakfast to late. Our spaces are large enough to accommodate gatherings and groups, with clever partitions or sliding panels that can be used to create smaller areas with a cozier feel. Seating arrangements reflect and respect single diners and drinkers too.
+                        </p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-5">
-                        <div className="flex bg-customBeige rounded-lg w-64 md:w-80 lg:w-[400px] p-4" onClick={() => handleMenuOpen(img4)}>
-                            <img src={cafe}  />
-                        </div>
-                        <div className="flex bg-customBeige rounded-lg w-64 md:w-80 lg:w-[400px] p-4" onClick={() => handleMenuOpen(img5)}>
-                            <img src={breakfast}  />
-                        </div>
+                    <div className="flex w-1/2 sm:w-full sm:ml-0">
+                        <img src={img10} />
                     </div>
                 </div>
             </div>
-            {selectedImage && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="relative">
-                        <button
-                            className="absolute top-0 right-0 mt-2 mr-2 text-white text-xl"
-                            onClick={handleCloseModal}
-                        >
-                            &times;
-                        </button>
-                        <img src={selectedImage} className="max-w-full max-h-screen md:max-w-lg md:max-h-3/4 lg:max-w-xl lg:max-h-3/4" alt="Menu Item" />
-                    </div>
-                </div>
-            )}
-        </div>
+            <div className="flex xl:flex-row flex-col mx-auto flex-wrap space-x-32 space-y-4 justify-center h-full">
+                <img src={b3} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
+                <img src={b1} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
+                <img src={b4} className="w-10/12 sm:w-1/2 lg:w-1/4 " />
+                
+            </div>
+        </>
     );
 }

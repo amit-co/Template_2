@@ -1,7 +1,10 @@
 import { useState } from "react";
-import img from "/buttons/Frame 29.png";
+import imgB from "/New/bgn.png";
+import back from "/buttons/Group 146.png";
+import { useNavigate } from 'react-router-dom';
 
 export default function Template({ images, Heading }) {
+    const navigate = useNavigate();
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
     const [visibleImagesCount, setVisibleImagesCount] = useState(8);
 
@@ -27,11 +30,18 @@ export default function Template({ images, Heading }) {
 
     return (
         <>
-            <div className="w-fit mx-auto mt-[18vh] sm:mt-[32vh]">
-                <h1 className="text-center font-bold tracking-widest text-Black text-6xl mb-2 ">{Heading}</h1>
+            <div className="bg-cover pb-10 " style={{ backgroundImage: `url(${imgB})` }}>
+                <div className=" flex flex-row  mr-10" >
+                    <button
+                        className="self-start mt-10 ml-10"
+                        onClick={() => navigate('/')}
+                    >
+                        <img src={back} alt="backward" className="w-10 h-10 object-contain" />
+                    </button>
+                    <h1 className=" font-bold tracking-widest text-customBrown3 text-6xl mb-2 mt-10 mx-auto">{Heading}</h1>
               
             </div>
-            <div className="h-[4px] bg-gradient-to-r from-transparent via-gray-600  to-transparent my-4 "></div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 mx-auto p-5">
                 {images.slice(0, visibleImagesCount).map((image, index) => (
                     <div key={index} className="relative">
@@ -48,7 +58,7 @@ export default function Template({ images, Heading }) {
                 <div className="text-center mt-6">
                     <button
                         onClick={handleLoadMore}
-                        className="text-customWhite text-lg mt-5  tracking-widest rounded-lg w-fit px-8 py-2 font-semibold bg-customBrown2 transition-all cursor-pointer duration-300 hover:bg-black"
+                            className="text-customBlack2 text-lg mt-5  tracking-widest rounded-lg w-fit px-10 py-4 font-semibold bg-customSalmon "
                     >
                         Load More
                     </button>
@@ -79,7 +89,8 @@ export default function Template({ images, Heading }) {
                         </button>
                     </div>
                 </div>
-            )}
+                )}
+                </div>
         </>
     );
 }
