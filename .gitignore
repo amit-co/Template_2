@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 *.vsidx
 /.vs/slnx.sqlite
+/.vs/Template_2/v17/DocumentLayout.json
+/.vs/VSWorkspaceState.json
+/.gitignore
