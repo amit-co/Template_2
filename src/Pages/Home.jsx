@@ -11,6 +11,7 @@ import img1 from "/New/gallery1.png";
 import img2 from "/New/gallery2.png";
 import img3 from "/New/gallery3.png";
 import { Link, useNavigate } from 'react-router-dom';
+import { Reservation } from "../Components/Reservation";
 
 
 export default function Home() {
@@ -50,7 +51,7 @@ export default function Home() {
                         </nav>
                     </div>
                 </div>
-                <BookNow />
+                <Reservation />
                 <Menus />
                 <div className="-mt-28">
                 <Venue />
