@@ -29,10 +29,10 @@ export default function VenueTemplate({ venueInfo }) {
                           </h1>
 
                          <div className="flex flex-col sm:w-56 w-full lg:w-[100vw] justify-center mx-auto mb-8">
-                  <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4  whitespace-break-spaces">
+                  <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4 mx-3 whitespace-break-spaces">
                                       The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
                                       </h1>
-                  <p className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium whitespace-break-spaces">
+                  <p className=" text-center text-black-600 text-sm sm:text-base mx-6 lg:text-lg tracking-widest font-medium whitespace-break-spaces">
                                       Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments That Can Be Used In Different Ways,
                                       As The Occasion Dictates Or As The Mood Changes. From Breakfast To Late. Our Spaces Are Large Enough To Accommodate Gatherings And Groups,
                                       With Clever Partitions Or Siding Panels That Can Be Used To Create Smaller Areas With A Cosier Feel. Seating Arrangements Reflect And

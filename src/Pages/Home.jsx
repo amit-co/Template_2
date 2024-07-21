@@ -30,7 +30,7 @@ export default function Home() {
                             Embark on a culinary journey with our diverse selection of restaurants, where every dish tells a story of flavor and creativity.
                             From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients.
                         </p>
-                        <div className="text-customWhite text-sm lg:text-lg mt-8 tracking-widest w-fit px-10 py-2 font-semibold bg-clip-text border-[2px] border-white ml-2 lg:ml-12 cursor-pointer hover:text-blue-500">
+                        <div className="text-customWhite text-sm lg:text-lg mt-8 tracking-widest w-fit px-10 py-2 font-semibold bg-clip-text border-[2px] border-white ml-2 cursor-pointer hover:text-blue-500">
                             Find A Table
                         </div>
                         <div className="flex mt-6 justify-center">
@@ -38,8 +38,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
-                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-6 mt-20">
+                    <div className="flex flex-col  items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
+                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-14 mt-20">
                             <a href="/" className="hover:text-blue-500">HOME</a>
                             <a href="/venue" className="hover:text-blue-500">VENUE</a>
                             <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
@@ -72,7 +72,7 @@ export default function Home() {
                             </div>
                             <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                 <Link to="/gallery/drinks">
-                                <img src={img2} className="sm:w-full w-88 mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
+                                <img src={img2} className="sm:w-full w-[75%]  mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
                                 </Link>
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-6xl ml-10 sm:ml-0">Drinks</h2>
@@ -80,7 +80,7 @@ export default function Home() {
                             </div>
                                 <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                     <Link to="/gallery/teams">
-                                <img src={img3} className="sm:w-full w-88 mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
+                                <img src={img3} className="sm:w-full w-[75%]  mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />
                                 </Link>
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-6xl ml-10 sm:ml-0">Team</h2>
@@ -91,8 +91,8 @@ export default function Home() {
                 
                 <RestrauntLocation />
                 <div className="flex flex-col items-center  pb-4">
-                    <h1 className="text-4xl">Want To Know More ?</h1>
-                    <button onClick={() => navigate("/about")} className="border bg-customTeal text-3xl px-4 py-2 rounded-lg">About Us</button>
+                    <h1 className="text-2xl md:text-4xl">Want To Know More ?</h1>
+                    <button onClick={() => navigate("/about")} className="border bg-customTeal text-xl md:text-3xl px-4 py-2 rounded-lg">About Us</button>
                 </div>
             </div>
         </>
