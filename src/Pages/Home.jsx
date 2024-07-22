@@ -98,8 +98,8 @@ export default function Home() {
                 
                 <RestrauntLocation />
                 <div className="flex flex-col items-center  pb-4">
-                    <h1 className="text-2xl md:text-4xl">Want To Know More ?</h1>
-                    <button onClick={() => navigate("/about")} className="border bg-customTeal text-xl md:text-3xl px-4 py-2 rounded-lg">About Us</button>
+                    <h1 className="text-2xl md:text-4xl text-customBrown3 tracking-widest">Want To Know More ?</h1>
+                    <button onClick={() => navigate("/about")} className="border bg-customTeal text-xl md:text-3xl px-3 py-1 my-6 rounded-lg">About Us</button>
                 </div>
             </div>
         </>
