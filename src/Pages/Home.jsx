@@ -1,7 +1,6 @@
 import logo from "/New/logo3.png";
 import cmpny from "/New/logo.png";
 import img from "/drinksImages/Drinks1.jpeg";
-import BookNow from "./BookNow";
 import { Menus } from "../Components/Menus";
 import Venue from "./Venue";
 import { RestrauntLocation } from "../Components/RestrauntLocation";
@@ -12,10 +11,16 @@ import img2 from "/New/gallery2.png";
 import img3 from "/New/gallery3.png";
 import { Link, useNavigate } from 'react-router-dom';
 import { Reservation } from "../Components/Reservation";
+import { useState } from "react";
 
 
 export default function Home() {
     const navigate = useNavigate();
+    const [toggle, setToggle] = useState(false);
+    const handleClick = () => {
+        setToggle(false);
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    };
     return (
         <>
             <div className="bg-cover " style={{ backgroundImage: `url(${imgB})` }}>
@@ -44,7 +49,7 @@ export default function Home() {
                             <a href="/venue" className="hover:text-blue-500">VENUE</a>
                             <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
                             <a href="/gallery" className="hover:text-blue-500">GALLERY</a>
-                            <a href="/" className="hover:text-blue-500">CONTACT</a>
+                            <a onClick={handleClick} className="hover:text-blue-500 cursor-pointer">CONTACT</a>
                             <a href="/about" className="hover:text-blue-500">ABOUT</a>
 
 
