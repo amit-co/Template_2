@@ -64,7 +64,7 @@ export default function Home() {
                 <Venue />
                 </div>
                     <div className="flex flex-col  bg-customTeal">
-                        <div className="flex flex-row w-fit items-center mx-auto sm:mt-6 lg:mt-[10vh] ml-12">
+                        <div className="flex flex-row w-fit items-center mx-auto sm:mt-6 mt-4 ml-12">
                             <img src={camera} className="w-12 lg:w-24 h-12 lg:h-24" />
                             <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-4xl ml-2 lg:text-5xl">Gallery</h1>
                         </div>

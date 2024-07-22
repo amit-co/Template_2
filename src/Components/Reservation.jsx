@@ -116,7 +116,7 @@ export function Reservation() {
                     <button onClick={() => navigate("/")} className="flex w-20  text-center py-6">
                         <h1 className="text-black text-3xl lg:text-4xl">Restaurant Name</h1>
                     </button>
-                    <div className="text-customBrown fixed right-0">
+                    <div className="text-customBrown fixed right-4">
                         {toggle ? (
                             <RxCross2
                                 onClick={() => setToggle(false)}
@@ -133,7 +133,7 @@ export function Reservation() {
                     <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
 
                     >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-28  2xl:space-x-16">
+                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16">
                             <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
                                 <h1>PRIVATE DINING</h1>
 
@@ -332,7 +332,7 @@ export function Reservation() {
             </div>
 
             <h2 className="md:text-3xl sm:text-2xl text-2xl lg:text-5xl font-bold text-customBlack2 text-center mb-4 mt-8 tracking-widest">Book Now</h2>
-        <div className="flex xl:flex-row  flex-col items-center xl:space-x-20 p-6 ">
+        <div className="flex xl:flex-row  flex-col items-center lg:ml-8 xl:space-x-20 p-6 ">
             <div>
                 <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
                 <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
