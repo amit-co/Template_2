@@ -17,7 +17,7 @@ const SelectField = ({ name, value, onChange, options }) => (
             name={name}
             value={value}
             onChange={onChange}
-            className="bg-clip-text text-xl text-black-700 sm:w-[40vh] w-72 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+            className="bg-clip-text text-xl text-black-700 sm:w-[30vh] lg:w-[20vh] xl:w-[30vh] 2xl:w-[40vh] w-56 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
 
         >
             {options.map((option) => (
@@ -125,7 +125,7 @@ export default function PrivateDinning() {
                         <img src={back} alt="backward" className="w-10 h-10 object-contain" />
                     </button>
          
-                <h1 className="text-customBrown3 text-4xl md:text-6xl font-bold mx-auto tracking-widest mt-10 mb-4">PRIVATE DINING</h1>
+                <h1 className="text-customBrown3 text-4xl md:text-6xl font-bold mx-auto tracking-widest ml-6 mt-10 mb-4">PRIVATE DINING</h1>
             </div>
                      <p className="w-11/12 text-center mt-10 text-xl lg:text-2xl  font-medium text-black-900 mx-auto">
                             Your Perfect Destination For Any Occasion, Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments
@@ -136,12 +136,12 @@ export default function PrivateDinning() {
                   
           
             <div className="bg-customSalmon bg-opacity-25 mb-3 mt-10 rounded-lg mx-8 lg:mx-16 py-10 " >
-                <div className="flex lg:flex-row flex-col space-y-12 lg:space-y-24 px-4 lg:px-16  sm:space-x-24">
-                    <img src={sp1} className="object-contain mt-2 lg:mt-10" />
+                <div className="flex lg:flex-row flex-col space-y-12 lg:space-y-2 px-4 lg:px-16  lg:space-x-16 2xl:space-x-24 sm:space-x-24">
+                    <img src={sp1} className="object-contain md:w-[450px] md:mx-48 lg:mx-0 xl:w-[566px] " />
                 <div className="flex flex-col  items-center ">
                     <div >
                         <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14 ">
+                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[30vh] lg:w-[20vh] xl:w-[30vh] 2xl:w-[40vh] w-56 h-14 ">
                             <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                                 {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
                                     <option key={number} value={number}>{number} People</option>
@@ -152,7 +152,7 @@ export default function PrivateDinning() {
                     </div>
                         <div className="mt-2">
                         <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
+                            <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[30vh] lg:w-[20vh] xl:w-[30vh] 2xl:w-[40vh] w-56 h-14">
                             <DatePicker
                                 selected={new Date(selectedDate)}
                                 onChange={handleDateChange}
@@ -167,7 +167,7 @@ export default function PrivateDinning() {
                         </div>
                         <div className="mt-2">
                         <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
-                        <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
+                            <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[30vh] lg:w-[20vh] xl:w-[30vh] 2xl:w-[40vh] w-56 h-14">
                             <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
                                 {generateTimeOptions().map(time => (
                                     <option key={time} value={time}>
@@ -178,8 +178,8 @@ export default function PrivateDinning() {
                             <LuClock className="absolute left-3 text-xl " />
                         </div>
                         </div>
-                    <div className="mt-2 ">
-                        <h1 className="text-2xl tracking-widest font-semibold ">Occassion</h1>
+                    <div className="mt-2  ">
+                        <h1 className="text-2xl tracking-widest  font-semibold ">Occassion</h1>
                         
                         <div className="relative flex items-center ">
                             <SelectField
@@ -210,7 +210,7 @@ export default function PrivateDinning() {
                                 name="message"
                                 onChange={handleChange}
                                 value={formData.message}
-                                className="bg-clip-text sm:w-[40vh] w-72 text-black-700 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
+                                    className="bg-clip-text sm:w-[30vh] xl:w-[30vh]  2xl:w-[40vh] lg:w-[20vh] w-56 text-black-700 px-3 h-14 border-[2px] border-customBlack2 rounded-lg focus:outline-none"
                                 rows="5"
                                 id="message"
                             ></textarea>
