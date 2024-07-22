@@ -28,7 +28,7 @@ export function Footer() {
             </div>
            
 
-            <div className="flex flex-col text-left mr-36 text-black md:text-base sm:text-sm text-sm lg:text-lg tracking-widest font-medium  ">
+            <div className="flex flex-col text-left mr-36 text-black md:text-base text-sm lg:text-lg tracking-widest font-medium  ">
                 
                 <p>Terminal Four,Hounslow,TW6 3AF</p>
                 <p>United Kingdom</p>
