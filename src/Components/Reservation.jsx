@@ -113,7 +113,7 @@ export function Reservation() {
                 <div className={`bg-customWhite text-white  flex justify-between px-10 items-center transition-opacity duration-300 `}
 
                 >
-                    <button onClick={() => navigate("/")} className="flex w-30  text-center py-6">
+                    <button onClick={() => navigate("/")} className="flex w-20  text-center py-6">
                         <h1 className="text-black text-3xl lg:text-4xl">Restaurant Name</h1>
                     </button>
                     <div className="text-customBrown fixed right-0">
@@ -304,8 +304,8 @@ export function Reservation() {
                 </div>
             </div>
 
-            <div className="flex hidden md:block bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 items-center justify-center ">
-                <p className="text-xs sm:text-lg lg:text-xl text-customBlack2 mx-2 sm:mx-3 text-center place-items-center sm:text-left">
+            <div className="flex hidden md:block bg-customTeal h-16 xl:h-12 mb-6 items-center justify-center ">
+                <p className="text-xs sm:text-lg lg:text-xl text-customBlack2 text-center  place-items-center ">
                     Terminal Four, Hounslow, TW6 3AF, United Kingdom | +44 (0) 208759 7755 | franky.rodrigues@hilton.com | OXBO-ReserveOcean.com
                 </p>
             </div>
