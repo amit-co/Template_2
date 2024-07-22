@@ -9,6 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import img6 from "/New/bgn.png";
 import img from "/Textures/4523.png";
+import logo from "/New/logo3.png";
 
 
 export function Reservation() {
@@ -112,10 +113,10 @@ export function Reservation() {
                 <div className={`bg-customWhite text-white  flex justify-between px-10 items-center transition-opacity duration-300 `}
 
                 >
-                    <button onClick={() => navigate("/")} className="flex w-20 text-center py-6">
-                        <h1 className="text-black text-4xl">Restaurant Name</h1>
+                    <button onClick={() => navigate("/")} className="flex w-30  text-center py-6">
+                        <h1 className="text-black text-3xl lg:text-4xl">Restaurant Name</h1>
                     </button>
-                    <div className="text-customBrown ">
+                    <div className="text-customBrown fixed right-0">
                         {toggle ? (
                             <RxCross2
                                 onClick={() => setToggle(false)}
@@ -303,8 +304,29 @@ export function Reservation() {
                 </div>
             </div>
 
-            <div className="flex bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 items-center justify-center ">
+            <div className="flex hidden md:block bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 items-center justify-center ">
                 <p className="text-xs sm:text-lg lg:text-xl text-customBlack2 mx-2 sm:mx-3 text-center place-items-center sm:text-left">
+                    Terminal Four, Hounslow, TW6 3AF, United Kingdom | +44 (0) 208759 7755 | franky.rodrigues@hilton.com | OXBO-ReserveOcean.com
+                </p>
+            </div>
+
+            <div className="md:hidden">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-customBrown3 text-center mb-4 mt-6 tracking-widest">Welcome</h2>
+                <p className="text-sm sm:text-lg text-customBrown3 mx-4 sm:mx-16 font-sans text-center mb-6">
+                    Embark on a culinary journey with our diverse selection of restaurants, where every dish tells a story of flavor and creativity.
+                    From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients.
+                </p>
+                <div className="flex justify-center items-center ">
+                <div className="text-customBlack2 bg-customTeal  text-base mt-8 tracking-widest w-fit px-10 py-2 font-semibold border-[2px] cursor-pointer hover:text-blue-500">
+                    Find A Table
+                    </div>
+                </div>
+                <div className="flex mt-6 justify-center">
+                    <img src={logo} className="w-[200px] contrast-200 mt-2 mr-2 lg:mr-8" alt="Logo" />
+                </div>
+            </div>
+            <div className="flex md:hidden bg-customTeal h-16 lg:h-20 sm:h-16 mb-6 mt-4 items-center justify-center ">
+                <p className="text-xs sm:text-base md:text-lg text-customBlack2 mx-2 sm:mx-20 md:mx-24 text-center place-items-center sm:text-left">
                     Terminal Four, Hounslow, TW6 3AF, United Kingdom | +44 (0) 208759 7755 | franky.rodrigues@hilton.com | OXBO-ReserveOcean.com
                 </p>
             </div>

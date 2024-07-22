@@ -24,9 +24,10 @@ export default function Home() {
     return (
         <>
             <div className="bg-cover " style={{ backgroundImage: `url(${imgB})` }}>
-                <div className="flex place-content-between w-full h-screen bg-cover  mx-auto" style={{ backgroundImage: `url(${img})` }}>
-                    <div className="w-4/12 xl:w-1/4 bg-white bg-opacity-20 backdrop-blur p-4 lg:p-8 flex flex-col items-center justify-center">
-                        <div className="text-center mb-4 mt-10">
+                <div className="hidden md:block">
+                <div className="flex  place-content-between w-full h-screen bg-cover  mx-auto" style={{ backgroundImage: `url(${img})` }}>
+                    <div className="w-4/12  xl:w-1/4 bg-white bg-opacity-20 backdrop-blur p-4 lg:p-8 flex flex-col items-center justify-center">
+                        <div className="text-center mb-4 lg:mt-10">
                             <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">ReserveOcean</h1>
                             <img src={cmpny} alt="OXBO Logo" className="w-20 h-20 mx-auto" />
                         </div>
@@ -44,7 +45,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col  items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
-                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-2xl text-left space-y-14 mt-20">
+                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-xl text-left 2xl:space-y-14 md:space-y-20 md:mt-80 2xl:mt-20">
                             <a href="/" className="hover:text-blue-500">HOME</a>
                             <a href="/venue" className="hover:text-blue-500">VENUE</a>
                             <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
@@ -55,6 +56,7 @@ export default function Home() {
 
                         </nav>
                     </div>
+                    </div>
                 </div>
                 <Reservation />
                 <Menus />
@@ -62,11 +64,11 @@ export default function Home() {
                 <Venue />
                 </div>
                     <div className="flex flex-col  bg-customTeal">
-                        <div className="flex flex-row w-fit items-center mx-auto sm:mt-[10vh] ml-12">
+                        <div className="flex flex-row w-fit items-center mx-auto sm:mt-6 lg:mt-[10vh] ml-12">
                             <img src={camera} className="w-12 lg:w-24 h-12 lg:h-24" />
-                            <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-4xl ml-20 sm:ml-0 lg:text-5xl">Gallery</h1>
+                            <h1 className="text-center font-medium tracking-widest text-Black md:text-4xl sm:text-3xl text-4xl ml-2 lg:text-5xl">Gallery</h1>
                         </div>
-                        <div className="md:flex w-full h-full items-center md:space-x-5 md:space-y-0 space-y-5 md:p-10 justify-between mt-4 pb-6">
+                        <div className="sm:flex w-full h-full items-center md:space-x-5 md:space-y-0 space-y-5 md:p-10 justify-between mt-4 pb-6">
                             <div className="relative group sm:w-[32%] w-full overflow-hidden">
                                 <Link to="/gallery/food">
                                 <img src={img1}  className="sm:w-full w-[75%] mx-auto h-auto transition-transform duration-300 ease-out group-hover:scale-110" />

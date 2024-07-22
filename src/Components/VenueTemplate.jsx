@@ -28,7 +28,7 @@ export default function VenueTemplate({ venueInfo }) {
                                             {venueInfo.venueType}
                           </h1>
 
-                         <div className="flex flex-col sm:w-56 w-full lg:w-[100vw] justify-center mx-auto mb-8">
+                         <div className="flex flex-col w-full lg:w-[100vw] justify-center mx-auto mb-8">
                   <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4 mx-3 whitespace-break-spaces">
                                       The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
                                       </h1>
