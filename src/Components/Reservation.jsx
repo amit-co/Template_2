@@ -133,7 +133,7 @@ export function Reservation() {
                     <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
 
                     >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16">
+                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16 cursor-pointer">
                             <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
                                 <h1>PRIVATE DINING</h1>
 

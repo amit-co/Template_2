@@ -45,7 +45,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col  items-center w-3/12 bg-white bg-opacity-20 backdrop-blur-sm p-8 ">
-                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-xl text-left 2xl:space-y-14 md:space-y-20 md:mt-80 2xl:mt-20">
+                        <nav className="flex flex-col text-white text-xl md:text-2xl lg:text-xl text-left 2xl:space-y-14 md:space-y-20 md:mt-20 2xl:mt-20">
                             <a href="/" className="hover:text-blue-500">HOME</a>
                             <a href="/venue" className="hover:text-blue-500">VENUE</a>
                             <a href="/privateDinning" className="hover:text-blue-500">PRIVATE DINNING</a>
