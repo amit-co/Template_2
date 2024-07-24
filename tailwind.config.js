@@ -23,7 +23,9 @@ export default {
                 customWhite: "#F4F4F4",
                 customBeige: "#E6DDD8",
                 customTeal: "#D69869",
-                customBlur: "#D9D9D9"
+                customBlur: "#D9D9D9",
+                customSalmon: "#E1B493"
+               
 
             },
             screens: {

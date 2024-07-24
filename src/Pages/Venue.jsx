@@ -40,4 +40,4 @@ VenueTemplate.propTypes = {
 };
 
 
-export default Venue
+export default Venue;

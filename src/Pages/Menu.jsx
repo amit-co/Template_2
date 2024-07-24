@@ -1,46 +1,65 @@
-import img1 from "/Textures/4525.png";
-import { Reserve } from "../Components/Reserve";
-import b1 from "/New/Rectangle 58.png";
-import b2 from "/New/Rectangle 59.png";
-import b3 from "/New/Rectangle 60.png";
-import b4 from "/New/Rectangle 61.png";
-import menu from "/New/Group 108.png";
-import img10 from "/New/gallery1.png";
+import img1 from "/New/bgn.png";
+import { useNavigate } from 'react-router-dom';
+import back from "/buttons/Group 146.png";
+import m1 from "/Menu/ird.png";
+import m2 from "/Menu/bar.png";
+import m3 from "/Menu/cafe.png";
+import m4 from "/Menu/kitchen.png";
+import c1 from "/Menu/camera.png";
+
 
 export default function Menu() {
-    const [selectedImage, setSelectedImage] = useState(null);
-
-    const handleMenuOpen = (image) => {
-        setSelectedImage(image);
-    };
-
-    const handleCloseModal = () => {
-        setSelectedImage(null);
-    };
+    const navigate = useNavigate();
+    
 
     return (
-        <div className="bg-repeat" style={{ backgroundImage: `url(${img1})` }}>
-            <div className="flex flex-col mt-48 items-center ">
-                <img src={menu} className="w-1/2 sm:w-auto" />
-
-                <div className="flex flex-col sm:flex-row items-center justify-center mx-auto sm:mt-[10vh] mt-10">
-                    <p className="text-2xl text-center mr-10 ml-10 font-medium text-gray-900 mb-28 m:w-1/2 ">OXBO Is A Destination For The Local Community, As Well As those visiting the city.Our sociable staff help to create a communal feel,building relationships with regulars and welcomimg new customers. Our menus are designed
-                        with groups in mind - sharing platters and pitchers celebrate the union of delicious food and great conversation.
-                        Our spaces are designed to be sociable. They are Multi-purpose all day dinning and drinking environments that can be used in different ways,
-                        as the occasion dictates or as the mood changes from breakfast to late.Our spaces are large enough to accommodate gatherings and groups , with clever partitions or sliding panels that can be used to create smaller areas with a cosier feel. Seating arrangements reflect and respect single diners and drinkers to.
-                    </p>
-                    <img src={img10} className="w-full sm:w-auto sm:mt-0 sm:ml-10" />
+        <div className="bg-cover pb-10 pt-28" style={{ backgroundImage: `url(${img1})` }}>
+            
+            <div className="flex flex-row mr-8">
+                <button
+                    className="self-start text-black text-2xl font-bold mt-10 ml-10"
+                    onClick={() => navigate('/')}
+                >
+                    <img src={back} alt="backward" className="w-10 h-10 object-contain" />
+                </button>
+                <h1 className="text-customBrown3 text-6xl font-bold mx-auto tracking-widest mt-10 mb-4">MENU</h1>
+            </div>
+            <div className="flex flex-col  space-y-10 ">
+                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10 mx-6 lg:mx-auto  justify-center">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 rounded-lg mt-4 sm:mt-0  w-[330px] lg:w-[439px] h-[300px] ">
+                        <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">In Room Dining</h1>
+                        
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
+                            <img src={m1} className="w-full h-full" />
+                            <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
+                        </div>
+                    </div>
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] rounded-lg  h-[300px]">
+                        <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">Bar Menu</h1>
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
+                            <img src={m2} className="w-full h-full" />
+                            <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="flex flex-row flex-wrap  justify-center h-full">
-                <img src={b3} className="w-full sm:w-1/2 lg:w-1/4 " />
-                <img src={b1} className="w-full sm:w-1/2 lg:w-1/4 " />
-                <img src={b4} className="w-full sm:w-1/2 lg:w-1/4 " />
-                <img src={b2} className="w-full sm:w-1/2 lg:w-1/4 " />
-            </div>
-            <div>
-                <Reserve />
-            </div>
+                <div className="flex flex-col  sm:flex-row sm:space-x-10 sm:space-y-0 space-y-10  mx-6 lg:mx-auto justify-center">
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] h-[300px] rounded-lg">
+                        <h1 className=" text-2xl text-customBrown3 font-bold text-customBrown3 font-bold tracking-widest mx-auto mt-2">Cafe</h1>
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
+                            <img src={m3} className="w-[398px] h-[243px] mx-auto" />
+                            <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
+                        </div>
+                    </div>
+                    <div className="flex flex-col bg-customSalmon bg-opacity-50 w-[330px] lg:w-[439px] h-[300px] rounded-lg">
+                        <h1 className=" text-2xl text-customBrown3 font-bold tracking-widest mx-auto mt-2">Kitchen Menu</h1>
+                        <div className="relative w-full lg:w-[398px] h-[243px] mx-auto">
+                        <img src={m4} className="w-[398px] h-[243px] mx-auto" />
+                        <img src={c1} className="absolute w-[41px] h-[42px] bottom-0 right-0 mb-2 ml-2" />
+                    </div>
+                    </div>
+                </div>
+             </div>
+                
         </div>
     );
 }

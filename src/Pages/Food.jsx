@@ -7,7 +7,7 @@ export default function Food() {
     return (
         <>
             <Template images={foodImages} Heading={"Food"} />
-            <Quote />
+            
         </>
     )
 }
