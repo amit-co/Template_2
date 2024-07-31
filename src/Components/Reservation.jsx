@@ -74,15 +74,15 @@ export function Reservation() {
         setSelectedDate(date.toISOString().split('T')[0]);
     };
 
-   /* const clickHandler = () => {
-        const formData = {
-            date: selectedDate,
-            time: selectedTime,
-            people: noOfPeople
-        };
-        const queryString = new URLSearchParams(formData).toString();
-        window.location.href = `https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine?${queryString}`;
-    };*/
+    /* const clickHandler = () => {
+         const formData = {
+             date: selectedDate,
+             time: selectedTime,
+             people: noOfPeople
+         };
+         const queryString = new URLSearchParams(formData).toString();
+         window.location.href = `https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine?${queryString}`;
+     };*/
 
     const handleTimeChange = (e) => {
         setSelectedTime(e.target.value);
@@ -133,7 +133,7 @@ export function Reservation() {
                     <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
 
                     >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16 cursor-pointer">
+                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16">
                             <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
                                 <h1>PRIVATE DINING</h1>
 
@@ -317,8 +317,8 @@ export function Reservation() {
                     From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients.
                 </p>
                 <div className="flex justify-center items-center ">
-                <div className="text-customBlack2 bg-customTeal  text-base mt-8 tracking-widest w-fit px-10 py-2 font-semibold border-[2px] cursor-pointer hover:text-blue-500">
-                    Find A Table
+                    <div className="text-customBlack2 bg-customTeal  text-base mt-8 tracking-widest w-fit px-10 py-2 font-semibold border-[2px] cursor-pointer hover:text-blue-500">
+                        Find A Table
                     </div>
                 </div>
                 <div className="flex mt-6 justify-center">
@@ -332,51 +332,51 @@ export function Reservation() {
             </div>
 
             <h2 className="md:text-3xl sm:text-2xl text-2xl lg:text-5xl font-bold text-customBlack2 text-center mb-4 mt-8 tracking-widest">Book Now</h2>
-        <div className="flex xl:flex-row  flex-col items-center lg:ml-8 xl:space-x-20 p-6 ">
-            <div>
-                <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
-                    <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
-                        {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
-                            <option key={number} value={number}>{number} People</option>
-                        ))}
-                    </select>
-                    <GoPeople className="absolute left-3 text-xl " />
+            <div className="flex xl:flex-row  flex-col items-center lg:ml-8 xl:space-x-20 p-6 ">
+                <div>
+                    <h1 className="text-2xl tracking-widest font-semibold ">Party Size</h1>
+                    <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
+                        <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
+                            {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
+                                <option key={number} value={number}>{number} People</option>
+                            ))}
+                        </select>
+                        <GoPeople className="absolute left-3 text-xl " />
+                    </div>
                 </div>
-            </div>
-            <div>
-            <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
-                    <DatePicker
-                        selected={new Date(selectedDate)}
-                        onChange={handleDateChange}
-                        dateFormat="dd/MM/yyyy"
-                        showYearDropdown
-                        scrollableYearDropdown
-                        yearDropdownItemNumber={15}
-                        className="w-full pl-10 pr-4 text-xl  outline-none bg-clip-text"
-                    />
-                <FaRegCalendar className="absolute left-3 text-xl " />
+                <div>
+                    <h1 className="text-2xl tracking-widest font-semibold ">Date</h1>
+                    <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
+                        <DatePicker
+                            selected={new Date(selectedDate)}
+                            onChange={handleDateChange}
+                            dateFormat="dd/MM/yyyy"
+                            showYearDropdown
+                            scrollableYearDropdown
+                            yearDropdownItemNumber={15}
+                            className="w-full pl-10 pr-4 text-xl  outline-none bg-clip-text"
+                        />
+                        <FaRegCalendar className="absolute left-3 text-xl " />
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
-                <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
-                <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
-                        {generateTimeOptions().map(time => (
-                            <option key={time} value={time}>
-                                {time}
-                            </option>
-                        ))}
-                    </select>
-                    <LuClock className="absolute left-3 text-xl " />
+                <div>
+                    <h1 className="text-2xl tracking-widest font-semibold ">Time</h1>
+                    <div className="relative flex items-center border-customBlack2 border-[2px] rounded-lg sm:w-[40vh] w-72 h-14">
+                        <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-xl outline-none bg-clip-text">
+                            {generateTimeOptions().map(time => (
+                                <option key={time} value={time}>
+                                    {time}
+                                </option>
+                            ))}
+                        </select>
+                        <LuClock className="absolute left-3 text-xl " />
+                    </div>
                 </div>
-            </div>
-           
+
                 <button onClick={() => navigate('/bookNow')} className="sm:w-[40vh] w-56 h-14 mt-8 tracking-widest bg-customBrown2 text-white text-lg  font-semibold rounded-lg transition duration-300 hover:bg-orange-600">
                     Find a Table
                 </button>
-                
+
 
             </div>
         </div>
