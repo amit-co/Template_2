@@ -27,3 +27,6 @@ dist-ssr
 /.vs/Template_2/v17/.wsuo
 /.vs/Template_2/v17/DocumentLayout.json
 /.vs/VSWorkspaceState.json
+/.vs/Template_2/v17/.wsuo
+/src/Pages/Home.jsx
+/.gitignore
