@@ -17,7 +17,7 @@ export function Reservation() {
     const [toggle, setToggle] = useState(false);
     const [displayGallery, setDisplayGallery] = useState(false);
     const [displayVenue, setDisplayVenue] = useState(false);
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
 
     const location = useLocation();
     const [selectedNav, setSelectedNav] = useState(location.pathname);
@@ -74,16 +74,6 @@ export function Reservation() {
         setSelectedDate(date.toISOString().split('T')[0]);
     };
 
-   /* const clickHandler = () => {
-        const formData = {
-            date: selectedDate,
-            time: selectedTime,
-            people: noOfPeople
-        };
-        const queryString = new URLSearchParams(formData).toString();
-        window.location.href = `https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine?${queryString}`;
-    };*/
-
     const handleTimeChange = (e) => {
         setSelectedTime(e.target.value);
     };
@@ -130,10 +120,8 @@ export function Reservation() {
                         )}
                     </div>
 
-                    <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6"
-
-                    >
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-4 lg:space-x-4 text-customBlack2  text-xl font-medium xl:space-x-32 mr-20  2xl:space-x-16 cursor-pointer">
+                    <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6">
+                        <div className="md:flex hidden space-x-8 lg:space-x-20 2xl:space-x-44 text-customBlack2 text-xl font-medium mr-20 cursor-pointer">
                             <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
                                 <h1>PRIVATE DINING</h1>
 
@@ -153,7 +141,7 @@ export function Reservation() {
                         </div>
                     </div>
                 </div>
-                <div className={` bg-customBrown3 w-full md:hidden transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
+                <div className={` bg-customBrown3 w-full md:hidden transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
 
                 >
                     <Link to="/" className="cursor-pointer ">
@@ -162,23 +150,6 @@ export function Reservation() {
                             onClick={() => setToggle(false)}
                         >
                             HOME
-                        </h1>
-                    </Link>
-                    <Link to="/bookNow" className="w-fit mx-auto relative cursor-pointer">
-                        <h1
-                            className="hover:text-customPink"
-                            onClick={() => setToggle(false)}
-                        >
-                            BOOK NOW
-                        </h1>
-                    </Link>
-
-                    <Link to="/menu" className="w-fit mx-auto cursor-pointer relative">
-                        <h1
-                            className="hover:text-customPink"
-                            onClick={() => setToggle(false)}
-                        >
-                            MENU
                         </h1>
                     </Link>
                     <Link
@@ -237,22 +208,6 @@ export function Reservation() {
                             PRIVATE DINNING
                         </h1>
                     </Link>
-                    <Link to="/giftVoucher" className="relative cursor-pointer">
-                        <h1
-                            className="hover:text-customPink"
-                            onClick={() => setToggle(false)}
-                        >
-                            GIFT VOUCHER
-                        </h1>
-                    </Link>
-                    <Link to="/contact" className="relative cursor-pointer">
-                        <h1
-                            className="hover:text-customPink"
-                            onClick={() => setToggle(false)}
-                        >
-                            CONTACT
-                        </h1>
-                    </Link>
                     <Link to="/gallery" onMouseEnter={() => setDisplayGallery(true)} onMouseLeave={() => setDisplayGallery(false)} className="relative cursor-pointer">
                         <h1
                             className={` hover:text-customPink`}
@@ -292,6 +247,14 @@ export function Reservation() {
                             </div>
 
                         )}
+                    </Link>
+                    <Link to="/contact" className="relative cursor-pointer">
+                        <h1
+                            className="hover:text-customPink"
+                            onClick={() => setToggle(false)}
+                        >
+                            CONTACT
+                        </h1>
                     </Link>
                     <Link to="/about" className="relative cursor-pointer">
                         <h1

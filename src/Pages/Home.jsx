@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
                 <Reservation />
                 <Menus />
-                <div className="-mt-28">
+                <div>
                 <Venue />
                 </div>
                     <div className="flex flex-col  bg-customTeal">
