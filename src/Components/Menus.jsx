@@ -23,12 +23,12 @@ export function Menus() {
                             as the occasion dictates or as the mood changes from breakfast to late. Our spaces are large enough to accommodate gatherings and groups, with clever partitions or sliding panels that can be used to create smaller areas with a cozier feel. Seating arrangements reflect and respect single diners and drinkers too.
                         </p>
                     </div>
-                    <div className="flex ml-6 w-[70%] h-[70%] sm:w-full sm:h-full ">
+                    <div className="flex hidden sm:block ml-6 w-[70%] h-[70%] sm:w-full sm:h-full ">
                         <img src={img10} />
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row w-full mx-auto space-x-3 lg:space-x-36  h-[15vh] sm:h-[25vh] lg:h-full">
+            <div className="flex flex-row w-full mx-auto space-x-1 mx-1 lg:space-x-36 h-full">
                 <img src={b3} className="w-4/12  lg:w-1/4 mx-auto rounded-lg" />
                 <img src={b1} className="w-4/12 lg:w-1/4 mx-auto rounded-lg" />
                 <img src={b4} className="w-4/12 lg:w-1/4 mx-auto rounded-lg" />

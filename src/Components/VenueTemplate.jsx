@@ -14,11 +14,6 @@ import imgB from "/New/bgn.png";
 
 export default function VenueTemplate({ venueInfo }) {
   const navigate = useNavigate()
-  const [menuDailog,setMenuDialog] = useState(false)
-  const [galleryDailog,setGalleryDialog] = useState(false)
-  function clickHandler(){
-    window.location.href = "https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine"
-  }
   return (
         <div>
      
@@ -29,24 +24,23 @@ export default function VenueTemplate({ venueInfo }) {
                           </h1>
 
                          <div className="flex flex-col w-full lg:w-[100vw] justify-center mx-auto mb-8">
-                  <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4 mx-3 whitespace-break-spaces">
-                                      The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
+                                      <h1 className=" text-center text-black-600 text-sm sm:text-base lg:text-lg tracking-widest font-medium mb-4 mx-3 whitespace-break-spaces">
+                                                          The Coming Together Of Friends And Families, Colleagues Or Strangers Is The Heart And Soul Of OXBO.
                                       </h1>
-                  <p className=" text-center text-black-600 text-sm sm:text-base mx-6 lg:text-lg tracking-widest font-medium whitespace-break-spaces">
-                                      Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments That Can Be Used In Different Ways,
-                                      As The Occasion Dictates Or As The Mood Changes. From Breakfast To Late. Our Spaces Are Large Enough To Accommodate Gatherings And Groups,
-                                      With Clever Partitions Or Siding Panels That Can Be Used To Create Smaller Areas With A Cosier Feel. Seating Arrangements Reflect And
-                                      Respect Single Diners And Drinkers Too.
-                                      </p>
-                              
+                                      <p className=" text-center text-black-600 text-sm sm:text-base mx-6 lg:text-lg tracking-widest font-medium whitespace-break-spaces">
+                                                          Our Spaces Are Designed To Be Sociable. They Are Multi-Purpose All-Day Dining And Drinking Environments That Can Be Used In Different Ways,
+                                                          As The Occasion Dictates Or As The Mood Changes. From Breakfast To Late. Our Spaces Are Large Enough To Accommodate Gatherings And Groups,
+                                                          With Clever Partitions Or Siding Panels That Can Be Used To Create Smaller Areas With A Cosier Feel. Seating Arrangements Reflect And
+                                                          Respect Single Diners And Drinkers Too.
+                                      </p>                              
                          </div>     
-                             <div className="flex sm:flex-row flex-col w-[611px]  sm:w-full sm:h-full">
-                              <div onClick={() => navigate("/gallery/drinks")} className=" bg-no-repeat sm:h-[80vh] sm:ml-20 mt-4 lg:w-[125vh]  " style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-12 ml-96" /></div>
-                  <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:h-[400px] ml-48 rounded-md mr-4 mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="absolute  mt-40 right-96 " /></div>
+                             <div className="flex sm:flex-row flex-col w-full sm:space-y-96 mr-2 mt-20 xl:mt-10 sm:ml-14 ml-20">
+                                <div onClick={() => navigate("/gallery/drinks")} className="bg-no-repeat sm:h-[80vh]  rounded-md sm:ml-12 sm:mt-4" style={{ backgroundImage: `url(${img2})` }}><img src={bar} className="mt-48 ml-96" /></div>
+                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:h-[400px] sm:ml-48 ml-32 rounded-md sm:mr-4 sm:mt-28 lg:w-full relative" style={{ backgroundImage: `url(${img3})` }}><img src={cafe} className="relative mt-44 sm:right-44 right-28" /></div>
                              </div>
-                             <div className="flex sm:flex-row flex-col w-full  space-y-12 mr-2 mt-30  xl:mt-30 sm:ml-14 ml-20">
-                                <div onClick={() => navigate("/gallery/food")}  className="bg-no-repeat sm:h-[80vh]  rounded-md sm:ml-12 sm:mt-4 lg:w-[125vh]   " style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48  " /></div>
-                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:h-[400px] sm:ml-48 ml-32 rounded-md sm:mr-4 sm:mt-28 lg:w-[125vh] relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 sm:right-44 right-36" /></div>
+                             <div className="flex sm:flex-row flex-col w-fit sm:space-y-96 mr-2 mt-20 xl:mt-10 sm:ml-14">
+                                <div onClick={() => navigate("/gallery/food")}  className="bg-no-repeat rounded-md sm:ml-12 sm:mt-4 w-full" style={{ backgroundImage: `url(${img4})` }}><img src={pd} className="mt-48 ml-96" /></div>
+                                <div onClick={() => navigate("/gallery/food")} className="bg-no-repeat sm:ml-48 ml-32 rounded-md sm:mr-4 mt-10 relative" style={{ backgroundImage: `url(${img5})` }}><img src={ird} className="relative mt-44 sm:right-44 right-28" /></div>
                              </div>
              
               </div>

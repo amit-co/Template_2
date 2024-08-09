@@ -21,7 +21,7 @@ export default {
                 customBlack: "#00000080",
                 customBlack2: "#000000",
                 customWhite: "#F4F4F4",
-                customBeige: "#E6DDD8",
+                customBeige: "#E6DDD8", 
                 customTeal: "#D69869",
                 customBlur: "#D9D9D9",
                 customSalmon: "#E1B493"

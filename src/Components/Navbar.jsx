@@ -11,6 +11,7 @@ export function Navbar() {
     const [displayGallery, setDisplayGallery] = useState(false);
     const [displayVenue, setDisplayVenue] = useState(false);
     const { pathname } = useLocation();
+    const [isFixed, setIsFixed] = useState(false);
     
     const location = useLocation();
     const [selectedNav, setSelectedNav] = useState(location.pathname);
@@ -18,6 +19,21 @@ export function Navbar() {
     const handleNavClick = (path) => {
         setSelectedNav(path);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const pathsWithoutNavbar = [
         "/",
@@ -28,16 +44,14 @@ export function Navbar() {
     }
 
     return (
-        <div className={`fixed top-0 left-0 right-0 z-10 transition-transform duration-300 `}>
-            
-              
-            <div className={`flex  bg-customWhite justify-between  text-xl items-center justify-around sm:py-4 `}
+        <div className={` top-0 left-0 right-0 z-10 transition-transform duration-300 ${isFixed ? 'fixed' : 'relative'}`}>
+            <div className={`bg-customWhite text-white  flex justify-between px-10 items-center transition-opacity duration-300 `}
 
             >
-                <button onClick={() => navigate("/")} className="flex w-20 text-center ">
-                    <h1 className="text-black  text-4xl">Restaurant Name</h1>
+                <button onClick={() => navigate("/")} className="flex w-20  text-center py-6">
+                    <h1 className="text-black text-3xl lg:text-4xl">Restaurant Name</h1>
                 </button>
-                <div className="text-customBrown ">
+                <div className="text-customBrown fixed right-4">
                     {toggle ? (
                         <RxCross2
                             onClick={() => setToggle(false)}
@@ -50,34 +64,30 @@ export function Navbar() {
                         />
                     )}
                 </div>
-                    
 
-                    
-                        <div className="xl:flex lg:flex md:flex hidden md:space-x-2 lg:space-x-4 text-customBlack2 text-xl font-medium xl:space-x-32  2xl:space-x-16">
-                            <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
-                                <h1>PRIVATE DINING</h1>
-                                
-                            </Link>
-                            <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/about')}>
-                                <h1>ABOUT US</h1>
-                                
-                            </Link>
-                            <Link to="/menu" className={`group relative ${selectedNav === '/menu' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/menu')}>
-                                <h1>MENU</h1>
-                               
-                            </Link>
-                            <Link to="/giftVoucher" className={`group relative ${selectedNav === '/giftVoucher' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/giftVoucher')}>
-                                <h1>GIFT VOUCHER</h1>
-                                
-                            </Link>
-                        </div>
-                    
+                <div className="flex bg-customWhite text-customBrown font-bold text-xl justify-around items-center sm:py-6">
+                    <div className="md:flex hidden space-x-8 lg:space-x-20 2xl:space-x-44 text-customBlack2 text-xl font-medium mr-20 cursor-pointer">
+                        <Link to="/privateDinning" className={`group relative ${selectedNav === '/privateDinning' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/privateDinning')}>
+                            <h1>PRIVATE DINING</h1>
+
+                        </Link>
+                        <Link to="/about" className={`group relative ${selectedNav === '/about' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/about')}>
+                            <h1>ABOUT US</h1>
+
+                        </Link>
+                        <Link to="/menu" className={`group relative ${selectedNav === '/menu' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/menu')}>
+                            <h1>MENU</h1>
+
+                        </Link>
+                        <Link to="/giftVoucher" className={`group relative ${selectedNav === '/giftVoucher' ? 'font-bold text-3xl cursor-pointer' : 'font-medium cursor-default'}`} onClick={() => handleNavClick('/giftVoucher')}>
+                            <h1>GIFT VOUCHER</h1>
+
+                        </Link>
+                    </div>
                 </div>
-            
+            </div>
+            <div className={` bg-customBrown3 w-full md:hidden transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
 
-
-            <div className={` bg-customBrown3 w-full transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
-                
             >
                 <Link to="/" className="cursor-pointer ">
                     <h1
@@ -85,23 +95,6 @@ export function Navbar() {
                         onClick={() => setToggle(false)}
                     >
                         HOME
-                    </h1>
-                </Link>
-                <Link to="/bookNow" className="w-fit mx-auto relative cursor-pointer">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        BOOK NOW
-                    </h1>
-                </Link>
-
-                <Link to="/menu" className="w-fit mx-auto cursor-pointer relative">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        MENU
                     </h1>
                 </Link>
                 <Link
@@ -160,22 +153,6 @@ export function Navbar() {
                         PRIVATE DINNING
                     </h1>
                 </Link>
-                <Link to="/giftVoucher" className="relative cursor-pointer">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        GIFT VOUCHER
-                    </h1>
-                </Link>
-                <Link to="/contact" className="relative cursor-pointer">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        CONTACT
-                    </h1>
-                </Link>
                 <Link to="/gallery" onMouseEnter={() => setDisplayGallery(true)} onMouseLeave={() => setDisplayGallery(false)} className="relative cursor-pointer">
                     <h1
                         className={` hover:text-customPink`}
@@ -216,6 +193,14 @@ export function Navbar() {
 
                     )}
                 </Link>
+                <Link to="/contact" className="relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        CONTACT
+                    </h1>
+                </Link>
                 <Link to="/about" className="relative cursor-pointer">
                     <h1
                         className="hover:text-customPink"
@@ -225,7 +210,6 @@ export function Navbar() {
                     </h1>
                 </Link>
             </div>
-
         </div>
     );
 }
